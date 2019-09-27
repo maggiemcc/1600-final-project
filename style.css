@@ -10,10 +10,6 @@ html {
     scroll-behavior: smooth;
 }
 
-
-
-
-
 body {
     font-family: 'Roboto', sans-serif;
     font-size: 1.8rem;
@@ -83,7 +79,6 @@ nav {
     padding: 2rem;
     background-color: rgb(39, 93, 56);
     box-shadow: 0 5px 0 rgb(102, 102, 102);
-    z-index: 10;
 }
 
 #navlist {
@@ -114,36 +109,35 @@ nav {
 }
   
 #welcome-section > p {
-    font-size: 5.5rem;
-    font-weight: 200;
+    font-size: 6rem;
+    font-weight: 800;
     font-style: none;
     color: black;
+    color: rgb(206, 161, 15);
   }
 
 .projects-section {
     text-align: center;
     justify-content: center;
-    padding: 5rem 2rem;
+    padding-top: 5rem;
     background:rgb(221, 240, 252);
 }
 
 .projects-section-header {
-    max-width: 1300px;
+    max-width: 1640px;
     margin: 0 auto 1rem auto;
-    border-bottom: 0.2rem rgb(0, 0, 0);
 }
-
-
 
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  grid-gap: 1rem;
+  grid-gap: 6rem;
   width: 100%;
   max-width: 1280px;
   margin: 0 auto;
   margin-bottom: 3rem;
 }
+
 
 @media (max-width: 30.625em) {
     projects-section {
@@ -158,7 +152,7 @@ nav {
 .project {
     background: rgb(181, 183, 184);
     box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-    border-radius: 6px;
+    border-radius: 2px;
     text-decoration: none;
     color: black;
     text-align: center;
@@ -166,11 +160,13 @@ nav {
 
 .code {
     color: black;
-    transition: color 0.3s ease-out;
+    transition: 0.3s ease-out;
 }
 
 .project:hover .code {
     color: rgb(206, 161, 15);
+    font-style: normal;
+    font-size: 5rem;
 }
 
 .project-image {
@@ -181,25 +177,20 @@ nav {
 
 .project-title {
     font-size: 2rem;
-    padding: 1rem 0.5rem;
+    padding: 2rem 0rem;
 }
 
-.btn {
-    display: inline-block;
-    padding: 1rem 2rem;
-    border-radius: 2px;
-}
 
 .contact-section {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
     width: 100%;
-    height: 70vh;
-    padding: 0 2rem;
+    height: 80vh;
+    padding: 0 4rem;
     color: white;
-    
     background-color: rgb(94, 93, 93);
 }
 
@@ -210,23 +201,27 @@ text-decoration: underline;
 color: rgb(255, 255, 255);
 }
 
-
+@media (max-width: 28.75em) {
+    contact-section-header > h2 {
+        font-size: 5rem;
+    }
+}
 
 .contact-section-header > p {
     font-style: normal;
-    font-size: 4rem;
-    font-weight: 200;
+    font-size: 6rem;
+    font-weight: 800;
     display: flex;
     justify-content: center;
-    color: rgb(255, 255, 255);
+    color: rgb(206, 161, 15);
     text-decoration: none;
 }
 
 .contact-links {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     width: 100%;
-    max-width: 1500px;
+    max-width: 1200px;
     margin-top: 4rem;
     flex-wrap: wrap;
 }
@@ -239,6 +234,16 @@ color: rgb(255, 255, 255);
 
 .contact-details:hover {
     transform: translateY(5px);
+}
+
+footer {
+    font-weight: 300;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 2rem;
+    background:  rgb(39, 93, 56);
+    border-top: 10px rgb(185, 0, 0);
+    color: white;
 }
 
 a {
@@ -257,14 +262,3 @@ hr {
     text-align: center;
     height: 5px;
 }
-
-footer {
-    font-weight: 300;
-    display: flex;
-    justify-content: space-evenly;
-    padding: 2rem;
-    background:  rgb(39, 93, 56);
-    border-top: 10px rgb(185, 0, 0);
-    color: white;
-}
-

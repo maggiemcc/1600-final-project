@@ -10,23 +10,9 @@ html {
     scroll-behavior: smooth;
 }
 
-@media (max-width: 75em) {
-    html {
-        font-size: 60%;
-    }
-}
 
-@media (max-width: 61.25em) {
-    html {
-      font-size: 58%;
-    }
-  }
 
-  @media (max-width: 28.75em) {
-    html {
-      font-size: 55%;
-    }
-  }
+
 
 body {
     font-family: 'Roboto', sans-serif;
@@ -40,7 +26,7 @@ body {
 h1 {
     text-align: center;
     font-family: 'Notable', sans-serif;
-    font-size: 7rem;
+    font-size: 6rem;
     color: white;
     -webkit-text-stroke: 1px black;
 }
@@ -81,7 +67,7 @@ a:hover {
     padding: 20px;
   }
 
-  p {
+p {
     font-size: 3rem;
 }
 
@@ -116,7 +102,6 @@ nav {
     padding: 2rem;
 }
 
-
 .welcome-section {
     display: flex;
     flex-direction: column;
@@ -126,7 +111,7 @@ nav {
     height: 100vh;
     background-color: #000;
     background-image: linear-gradient(62deg, #d1d0d0 0%, #313131 100%);
-  }
+}
   
 #welcome-section > p {
     font-size: 5.5rem;
@@ -175,7 +160,7 @@ nav {
 }
 
 .project {
-    background: gray;
+    background: rgb(181, 183, 184);
     box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
     border-radius: 6px;
     text-decoration: none;
@@ -215,15 +200,18 @@ nav {
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 60vh;
+    height: 70vh;
     padding: 0 2rem;
     color: white;
+    
     background-color: rgb(94, 93, 93);
 }
 
 .contact-section-header > h2 {
 font-size: 6rem;
 -webkit-text-stroke: 1px black;
+text-decoration: underline;
+color: rgb(255, 255, 255);
 }
 
 @media (max-width: 28.75em) {
@@ -235,8 +223,11 @@ font-size: 6rem;
 .contact-section-header > p {
     font-style: italic;
     font-size: 4rem;
+    font-weight: 200;
     display: flex;
     justify-content: center;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
 }
 
 .contact-links {
@@ -261,6 +252,7 @@ font-size: 6rem;
 a {
     text-decoration: none;
     color: white;
+    -webkit-text-stroke: 1px black;
     font-style: initial;
     font-size: 3rem;
 }
@@ -268,7 +260,7 @@ a {
 hr {
     border: none;
     border-top: 20px double rgb(0, 0, 0);
-    background-color: rgb(94, 93, 93);
+    background-color: rgb(255, 255, 255);
     overflow: visible;
     text-align: center;
     height: 5px;
@@ -280,6 +272,7 @@ footer {
     justify-content: space-evenly;
     padding: 2rem;
     background:  rgb(39, 93, 56);
-    border-top: 4px black;
+    border-top: 10px rgb(185, 0, 0);
     color: white;
 }
+

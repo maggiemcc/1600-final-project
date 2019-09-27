@@ -133,11 +133,7 @@ nav {
     border-bottom: 0.2rem rgb(0, 0, 0);
 }
 
-@media (max-width: 28.75em) {
-    .projects-section-header {
-      font-size: 4rem;
-    }
-  }
+
 
 .projects-grid {
   display: grid;
@@ -214,14 +210,10 @@ text-decoration: underline;
 color: rgb(255, 255, 255);
 }
 
-@media (max-width: 28.75em) {
-    contact-section-header > h2 {
-        font-size: 4rem;
-    }
-}
+
 
 .contact-section-header > p {
-    font-style: italic;
+    font-style: normal;
     font-size: 4rem;
     font-weight: 200;
     display: flex;

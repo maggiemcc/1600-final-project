@@ -138,7 +138,6 @@ nav {
   margin-bottom: 3rem;
 }
 
-
 @media (max-width: 30.625em) {
     projects-section {
     padding: 6rem 1rem;
@@ -179,7 +178,6 @@ nav {
     font-size: 2rem;
     padding: 2rem 0rem;
 }
-
 
 .contact-section {
     display: flex;

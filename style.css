@@ -133,7 +133,7 @@ nav {
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   grid-gap: 4rem;
   width: 100%;
-  max-width: 1000px;
+  max-width: 960px;
   margin: 0 auto;
   margin-bottom: 6rem;
 }

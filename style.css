@@ -119,12 +119,12 @@ nav {
 .projects-section {
     text-align: center;
     justify-content: center;
-    padding: 5rem 1rem;
+    padding: 10rem 2rem;
     background:rgb(221, 240, 252);
 }
 
 .projects-section-header {
-    max-width: 1640px;
+    max-width: 640px;
     margin: 0 auto 1rem auto;
 }
 

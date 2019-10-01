@@ -233,7 +233,7 @@ color: rgb(255, 255, 255);
 }
 
 .contact-details:hover {
-    padding: 5rem;
+    transform: translateY(8px);
 }
 
 footer {

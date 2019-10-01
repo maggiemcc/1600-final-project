@@ -119,7 +119,7 @@ nav {
 .projects-section {
     text-align: center;
     justify-content: center;
-    padding-top: 2rem;
+    padding: 10rem 2rem;
     background:rgb(221, 240, 252);
 }
 
@@ -188,7 +188,7 @@ nav {
     text-align: center;
     width: 100%;
     height: 80vh;
-    padding: 0 4rem;
+    padding: 0 2rem;
     color: white;
     background-color: rgb(94, 93, 93);
 }
@@ -220,7 +220,7 @@ color: rgb(255, 255, 255);
     display: flex;
     justify-content: space-evenly;
     width: 100%;
-    max-width: 1280px;
+    max-width: 1000px;
     margin-top: 4rem;
     flex-wrap: wrap;
 }

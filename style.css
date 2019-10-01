@@ -239,7 +239,7 @@ footer {
     font-weight: 300;
     display: flex;
     justify-content: space-evenly;
-    padding: 2rem;
+    padding: 10rem 2rem;
     background:  rgb(39, 93, 56);
     border-top: 10px rgb(185, 0, 0);
     color: white;

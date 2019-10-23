@@ -1,5 +1,5 @@
-import { films } from '../Assets/films'
-import { people } from '../Assets/people'
+import { films } from '../Assets/films.js'
+import { people } from '../Assets/people.js'
 console.log(films[0].opening_crawl)
 
 let mainArea = document.querySelector('main')
@@ -36,7 +36,7 @@ maleButton.addEventListener('click', () => {
             return element.firstChild.textContent
         })
         console.log(matchedDiv)
-        matchedDiv[0].setAttribute("style", "display": none;")
+        matchedDiv[0].setAttribute("style", "display: none;")
 })
     femaleCharacters.forEach(elt => {
        //elt.setAttribute("style", "visibility: hidden;")

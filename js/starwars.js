@@ -23,7 +23,7 @@ mainArea.appendChild(filmDiv)
   console.log(maleCharacters)
   const femaleCharacters = people.filter(person => person.gender === 'female')
   console.log(femaleCharacters)
-  const otherCharacters = people.filter(person => person.gender !== 'female' & 'male')
+  const otherCharacters = people.filter(person => person.gender !== 'female' & person.gender !== 'male')
   console.log(otherCharacters)
   const allDivs = Array.from(mainArea.querySelectorAll('div'))
 

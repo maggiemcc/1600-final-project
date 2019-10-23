@@ -3,9 +3,9 @@ import { people } from '../Assets/people.js'
 console.log(films[0].opening_crawl)
 
 let mainArea = document.querySelector('main')
-let mainHeader = document.querySelector('header')
 
-/*films.forEach(function(film) {
+
+films.forEach(function(film) {
 let filmDiv = document.createElement('div')
 let title = document.createElement('h1')
 let crawl = document.createElement('p')
@@ -17,39 +17,7 @@ title.textContent = film.title
 crawl.innerText = film.opening_crawl
     
 mainArea.appendChild(filmDiv)
-  }); */
-
-  const maleCharacters = people.filter(person => person.gender === 'male')
-  console.log(maleCharacters)
-  const femaleCharacters = people.filter(person => person.gender === 'female')
-  console.log(femaleCharacters)
-  const otherCharacters = people.filter(person => person.gender !== 'female' & person.gender !== 'male')
-  console.log(otherCharacters)
-  const allDivs = Array.from(mainArea.querySelectorAll('div'))
-
-
-let maleButton = document.createElement('button')
-maleButton.textContent = "Male Characters"
-maleButton.addEventListener('click', () => {
-    maleCharacters.forEach(elt => {
-        let matchedDiv = allDivs.filter(element => {
-            return element.firstChild.textContent
-        })
-        console.log(matchedDiv)
-        matchedDiv[0].setAttribute("style", "display: none;")
-})
-    femaleCharacters.forEach(elt => {
-       //elt.setAttribute("style", "visibility: hidden;")
-    })
-  })
-let femaleButton = document.createElement ('button')
-femaleButton.textContent = "Female Characters"
-femaleButton.addEventListener('click', event => {
-
-});
-
-mainHeader.appendChild(maleButton)
-mainHeader.appendChild(femaleButton)
+  });
 
 
 people.forEach(function(person) {
@@ -81,6 +49,13 @@ function getCharNumber(charURL) {
     return charID
   }
 }
+
+
+const maleCharacters = people.filter(person => person.gender === 'male')
+console.log(maleCharacters)
+const femaleCharacters = people.filter(person => person.gender === 'female')
+console.log(femaleCharacters)
+
 
 
 

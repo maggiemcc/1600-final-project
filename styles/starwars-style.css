@@ -1,0 +1,43 @@
+h1 {
+    color: rgb(255, 0, 0);
+    font-size: 2rem;
+    -webkit-text-stroke: 1px rgb(0, 0, 0); 
+    font-family: 'Grenze', serif;
+    text-decoration: underline;
+}
+
+h3 {
+    font-family: 'Grenze', serif;
+    font-weight: bolder;
+}
+
+p {
+    font-family: 'Grenze', serif;
+    font-weight: lighter;
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 2rem;
+}
+
+img {
+        border-color: red;
+        border-width: 10px;
+        border-style: inset;
+        width: 200px;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    padding: 20px;
+    font-size: 1.5rem;
+    border-radius: 10% / 50%
+    background-color: bisque;
+    visibility: visible;
+}

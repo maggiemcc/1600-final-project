@@ -51,11 +51,13 @@ function getCharNumber(charURL) {
   }
 }
 
+
 const maleCharacters = people.filter(person => person.gender === 'male')
 const femaleCharacters = people.filter(person => person.gender === 'female')
 const otherCharacters = people.filter(person => person.gender !== 'female' & person.gender !== 'male')
 console.log(otherCharacters)
 const allDivs = Array.from(mainArea.querySelectorAll('div'))
+
 
 let maleButton = document.createElement('button')
 maleButton.textContent = "Male Characters"
@@ -75,6 +77,7 @@ maleButton.addEventListener('click', () => {
       matchedDiv[0].setAttribute("style", "display: none;")
   })
 })
+
 
 let femaleButton = document.createElement('button')
 femaleButton.textContent = "Female Characters"
@@ -96,12 +99,8 @@ femaleCharacters.forEach(elt => {
 });
 
 
-
 mainHeader.appendChild(maleButton)
 mainHeader.appendChild(femaleButton)
-
-
-
 
 
 console.log(maleCharacters)

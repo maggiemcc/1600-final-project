@@ -2,14 +2,6 @@ body {
     background: linear-gradient(0.25turn, #fffefe, #686868b2);
     margin: 30px;
 }
-hr {
-    border: none;
-    border-top: 24px double hsl(240, 100%, 50%);
-    background-color: #006eff;
-    overflow: visible;
-    text-align: center;
-    height: 100%;
-}
 
 h1 {
     color: rgb(255, 0, 0);

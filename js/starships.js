@@ -9,19 +9,20 @@ starships.forEach(ship => {
 
     shipName.textContent = ship.name
     let shipNum= getCharNumber(ship.url)
-    shipPic.src = 'https://starwards-visualguide.com/assets/img/starships/$(shipNum).jpg'
+    shipPic.src = `https://starwars-visualguide.com/assets/img/starships/${shipNum}.jpg`
     
 shipDiv.appendChild(shipName)
     shipDiv.appendChild(shipPic)
     contentArea.appendChild(shipDiv)
 })
 
+
 function getCharNumber(charURL) {
-    let end = charURL.lastIndexOf('/')
-    let charID = charURL.substring(end -2, end)
-    if(charID.indexOf('/') !== -1 ) {
-      return charID.slice(1,2)
-    } else {
-      return charID
-    }
+  let end = charURL.lastIndexOf('/')
+  let charID = charURL.substring(end -2, end)
+  if(charID.indexOf('/') !== -1 ) {
+    return charID.slice(1,2)
+  } else {
+    return charID
   }
+}

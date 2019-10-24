@@ -32,15 +32,12 @@ img {
 header {
     display: flex;
     justify-content: center;
-    border: 4mm ridge blue;
-    box-sizing: border-box;
-    width: 100%;
-    padding: 5px;
+    
     
 }
 
 Button {
-    padding: 22px;
+    padding: 10px;
     font-size: 1rem;
     border-radius: 30px;
     background-color: rgb(0, 110, 255);
@@ -48,4 +45,8 @@ Button {
      -webkit-text-stroke: 1px rgb(0, 0, 0);  
      font-family: 'Anton', sans-serif;
      visibility: visible;
+     border: 4mm ridge blue;
+    box-sizing: border-box;
+    width: 20%;
+    padding: 8px;
 }

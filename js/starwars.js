@@ -76,6 +76,13 @@ maleButton.addEventListener('click', () => {
       console.log(matchedDiv)
       matchedDiv[0].setAttribute("style", "display: none;")
   })
+  otherCharacters.forEach(elt => {  
+    let matchedDiv = allDivs.filter(element => {
+        return element.firstChild.textContent === elt.name
+    })
+      console.log(matchedDiv)
+      matchedDiv[0].setAttribute("style", "display: none;")
+  })
 })
 
 
@@ -90,6 +97,13 @@ femaleCharacters.forEach(elt => {
       matchedDiv[0].setAttribute("style", "visibility: visibile;")
   })
   maleCharacters.forEach(elt => {  
+    let matchedDiv = allDivs.filter(element => {
+        return element.firstChild.textContent === elt.name
+    })
+      console.log(matchedDiv)
+      matchedDiv[0].setAttribute("style", "display: none;")
+  })
+  otherCharacters.forEach(elt => {  
     let matchedDiv = allDivs.filter(element => {
         return element.firstChild.textContent === elt.name
     })

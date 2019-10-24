@@ -4,7 +4,7 @@ body {
 }
 hr {
     border: none;
-    border-top: 24px double #0000ff;
+    border-top: 24px double hsl(240, 100%, 50%);
     background-color: #006eff;
     overflow: visible;
     text-align: center;
@@ -13,10 +13,12 @@ hr {
 
 h1 {
     color: rgb(255, 0, 0);
-    font-size: 2rem;
-    -webkit-text-stroke: 1px rgb(0, 0, 0); 
+    font-size: 1rem;
+    font-weight: bold;
+    -webkit-text-stroke: 0px rgb(0, 0, 0); 
     font-family: 'Grenze', serif;
-    text-decoration: underline;
+    text-decoration: none;
+    margin: 0px;
 }
 
 h3 {
@@ -31,7 +33,7 @@ p {
 
 main {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     grid-gap: 2rem;
 }
 
@@ -46,6 +48,7 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    margin-bottom: 20px;
 }
 
 Button {
@@ -61,4 +64,12 @@ Button {
      -webkit-text-stroke: 1px rgb(0, 0, 0);  
      font-family: 'Anton', sans-serif;
      visibility: visible;
+}
+
+div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid black;
+    padding: 6px;
 }

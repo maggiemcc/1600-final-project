@@ -4,7 +4,7 @@
 
 body {
   margin: 40px;
-  font-family: 'Open Sans', 'sans-serif';
+  font-family: 'Anton', sans-serif;
   background-color: #fff;
   color: #444;
 }
@@ -17,6 +17,7 @@ h1, p {
 .sidebar {
   float: left;
   width: 19.1489%;
+  font-family: 'Anton', sans-serif;
 }
 
 .content {
@@ -38,7 +39,7 @@ h1, p {
   color: #fff;
   border-radius: 5px;
   padding: 20px;
-  font-size: 150%;
+  font-size: 2rem;
   /* needed for the floated layout*/
   margin-bottom: 10px;
 }
@@ -58,7 +59,7 @@ h1, p {
     /* needed for the floated layout */
     clear: both;
     font-family: 'Anton', sans-serif;
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: white;
   }
 

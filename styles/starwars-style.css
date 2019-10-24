@@ -32,14 +32,15 @@ img {
 header {
     display: flex;
     justify-content: center;
+    
 }
 
 Button {
     padding: 20px;
-    font-size: 1.5rem;
+    font-size: 1rem;
     border-radius: 30px;
     background-color: red;
      color: black;
-     font-family: 'Grenze', serif;
+     font-family: 'Anton', sans-serif;
      visibility: visible;
 }

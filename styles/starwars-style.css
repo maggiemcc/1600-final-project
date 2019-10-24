@@ -23,7 +23,7 @@ main {
 }
 
 img {
-        border-color: red;
+        border-color: #ff0000;
         border-width: 10px;
         border-style: inset;
         width: 200px;
@@ -39,13 +39,17 @@ Button {
     padding: 20px;
     font-size: 1rem;
     border-radius: 30px;
-    border: 4mm ridge blue;
+    border: 4mm ridge #0000ff;
     box-sizing: border-box;
     padding: 15px;
     width: 25%;
-    background-color: rgb(0, 110, 255);
+    background-color: #006eff;
      color: white;
      -webkit-text-stroke: 1px rgb(0, 0, 0);  
      font-family: 'Anton', sans-serif;
      visibility: visible;
+}
+
+body {
+    background: linear-gradient(#fffefe, #d9f1f3, #686868b2);
 }

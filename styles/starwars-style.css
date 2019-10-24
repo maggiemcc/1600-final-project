@@ -1,3 +1,7 @@
+body {
+    background: linear-gradient(0.25turn, #fffefe, #686868b2);
+}
+
 h1 {
     color: rgb(255, 0, 0);
     font-size: 2rem;
@@ -48,8 +52,4 @@ Button {
      -webkit-text-stroke: 1px rgb(0, 0, 0);  
      font-family: 'Anton', sans-serif;
      visibility: visible;
-}
-
-body {
-    background: linear-gradient(#fffefe, #d9f1f3, #686868b2);
 }

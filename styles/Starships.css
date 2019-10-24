@@ -47,6 +47,10 @@ h1, p {
   grid-column: 1 / -1;
   /* needed for the floated layout */
   clear: both;
+  font-family: 'Anton', sans-serif;
+  font-size: 3rem;
+  -webkit-text-stroke: 1px rgb(0, 0, 0);
+  color: red;
 }
 
 

@@ -37,7 +37,9 @@ header {
 button {
     padding: 20px;
     font-size: 1.5rem;
-    border-radius: 10% / 50%;
-    background-color: lightblue;
-    visibility: visible;
+    border-radius: 30px;
+    background-color: red;
+     color: black;
+     font-family: 'Grenze', serif;
+     visibility: visible;
 }

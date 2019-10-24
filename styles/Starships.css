@@ -43,7 +43,7 @@ h1, p {
   margin-bottom: 10px;
 }
 
-.header, .footer {
+.header {
   grid-column: 1 / -1;
   /* needed for the floated layout */
   clear: both;
@@ -52,6 +52,16 @@ h1, p {
   -webkit-text-stroke: 1px rgb(0, 0, 0);
   color: red;
 }
+
+.footer {
+    grid-column: 1 / -1;
+    /* needed for the floated layout */
+    clear: both;
+    font-family: 'Anton', sans-serif;
+    font-size: 2rem;
+    -webkit-text-stroke: 1px rgb(0, 0, 0);
+    color: white;
+  }
 
 
 /* We need to set the widths used on floated items back to auto, and remove the bottom margin as when we have grid we have gaps. */

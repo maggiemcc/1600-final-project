@@ -113,12 +113,42 @@ femaleCharacters.forEach(elt => {
 });
 
 
+let otherButton = document.createElement('button')
+otherButton.textContent = "Other Characters"
+otherButton.addEventListener('click', event => {
+otherCharacters.forEach(elt => {
+    let matchedDiv = allDivs.filter(element => {
+        return element.firstChild.textContent === elt.name
+    })
+      console.log(matchedDiv)
+      matchedDiv[0].setAttribute("style", "visibility: visibile;")
+  })
+  maleCharacters.forEach(elt => {  
+    let matchedDiv = allDivs.filter(element => {
+        return element.firstChild.textContent === elt.name
+    })
+      console.log(matchedDiv)
+      matchedDiv[0].setAttribute("style", "display: none;")
+  })
+  femaleCharacters.forEach(elt => {  
+    let matchedDiv = allDivs.filter(element => {
+        return element.firstChild.textContent === elt.name
+    })
+      console.log(matchedDiv)
+      matchedDiv[0].setAttribute("style", "display: none;")
+  })
+});
+
+
+
 mainHeader.appendChild(maleButton)
 mainHeader.appendChild(femaleButton)
+mainHeader.appendChild(otherButton)
 
 
 console.log(maleCharacters)
 console.log(femaleCharacters)
+console.log(otherCharacters)
 
 
 

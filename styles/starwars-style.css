@@ -32,6 +32,10 @@ img {
 header {
     display: flex;
     justify-content: center;
+    border: 4mm ridge blue;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 15px;
     
 }
 

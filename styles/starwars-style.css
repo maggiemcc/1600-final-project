@@ -25,7 +25,7 @@ p {
 
 main {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(325px, 1fr));
     grid-gap: 2rem;
 }
 
@@ -33,7 +33,7 @@ img {
         border-color: #ff0000;
         border-width: 10px;
         border-style: inset;
-        width: 200px;
+        width: 230px;
 }
 
 header {

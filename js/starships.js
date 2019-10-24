@@ -16,7 +16,6 @@ shipDiv.appendChild(shipName)
     contentArea.appendChild(shipDiv)
 })
 
-
 function getCharNumber(charURL) {
   let end = charURL.lastIndexOf('/')
   let charID = charURL.substring(end -2, end)

@@ -86,3 +86,9 @@ color {
   -webkit-text-stroke: 1px rgb(255, 255, 255); 
   font-size: 2rem;
 }
+
+h3 {
+  color: blue;
+  -webkit-text-stroke: 1px rgb(255, 255, 255); 
+  font-size: 2rem;
+}

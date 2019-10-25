@@ -81,3 +81,8 @@ img {
   width: 400px;
 
 }
+color {
+  color: blue;
+  -webkit-text-stroke: 1px rgb(255, 255, 255); 
+  font-size: 3rem;
+}

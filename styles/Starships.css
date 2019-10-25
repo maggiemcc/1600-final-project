@@ -91,4 +91,5 @@ h3 {
   color: red;
   -webkit-text-stroke: 1px rgb(255, 255, 255); 
   font-size: 2rem;
+  text-decoration: underline solid white;
 }

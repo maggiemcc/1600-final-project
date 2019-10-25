@@ -40,7 +40,7 @@ h1, p {
   color: #fff;
   border-radius: 5px;
   padding: 20px;
-  font-size: 1.5rem;
+  font-size: 1rem;
   /* needed for the floated layout*/
   margin-bottom: 10px;
 }

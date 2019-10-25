@@ -88,7 +88,7 @@ color {
 }
 
 h3 {
-  color: blue;
+  color: red;
   -webkit-text-stroke: 1px rgb(255, 255, 255); 
   font-size: 2rem;
 }

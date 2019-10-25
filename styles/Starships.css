@@ -60,7 +60,7 @@ h1, p {
     /* needed for the floated layout */
     clear: both;
     font-family: 'Anton', sans-serif;
-    font-size: 1.5rem;
+    font-size: 1rem;
     color: white;
   }
 

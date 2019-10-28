@@ -49,8 +49,8 @@ Button {
     border-radius: 30px;
     border: 4mm ridge #0000ff;
     box-sizing: border-box;
-    padding: 15px;
-    width: 25%;
+    padding: 6px;
+    width: 20%;
     background-color: #006eff;
      color: white;
      -webkit-text-stroke: 1px rgb(0, 0, 0);  

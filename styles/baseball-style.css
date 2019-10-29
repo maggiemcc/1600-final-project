@@ -38,10 +38,10 @@ body { font-family: sans-serif; }
 }
 
 .card__face--front {
-  background: red;
+  background: blue;
 }
 
 .card__face--back {
-  background: blue;
+  background: gray;
   transform: rotateY(180deg);
 }

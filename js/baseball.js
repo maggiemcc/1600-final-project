@@ -26,3 +26,8 @@ console.log(allPokemon().then)
     
     mainArea.appendChild(personDiv)
 })*/
+
+var card = document.querySelector('.card');
+card.addEventListener( 'click', function() {
+  card.classList.toggle('is-flipped');
+});

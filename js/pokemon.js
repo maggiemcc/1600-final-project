@@ -9,6 +9,7 @@ async function getAPIData(url) {
 }
 }
 
+
 const theData = getAPIData('https://pokeapi.co/api/v2/pokemon/')
 .then(data => {
     console.log(data.results)
@@ -23,8 +24,8 @@ const theData = getAPIData('https://pokeapi.co/api/v2/pokemon/')
 
 console.log(theData)
 
-
 let mainArea = document.querySelector('main')
+
 
 function populateDOM(single_pokemon) {
     let pokeDiv = document.createElement('div')
@@ -47,6 +48,8 @@ function populateDOM(single_pokemon) {
     mainArea.appendChild(pokeDiv)
   }
     
+
+  
   function getPokeNumber(id) {
     if(id < 10) return '00${id}'
     if(id > 9 && id < 100) {
@@ -54,9 +57,3 @@ function populateDOM(single_pokemon) {
     } else return id
   }
 
-
-
-/* var card = document.querySelector('.card');
-card.addEventListener( 'click', function() {
-  card.classList.toggle('is-flipped');
-}); */

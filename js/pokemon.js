@@ -29,10 +29,11 @@ let mainArea = document.querySelector('main')
 function populateDOM(single_pokemon) {
     let pokeDiv = document.createElement('div')
     let name = document.createElement('h3')
+    let gender = document.createElement('p')
     let pic = document.createElement('img')
 
-    //pokeDiv.setAttribute('class', 'charDivs')
-    //pic.setAttribute('class', 'picDivs')
+    pokeDiv.setAttribute('class', 'charDivs')
+    pic.setAttribute('class', 'picDivs')
 
     let pokeNum = getPokeNumber(single_pokemon.url)
    

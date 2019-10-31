@@ -1,9 +1,9 @@
 
 async function getAPIData(url) {
   try {
-    const response = await fetch(url)
-    const data = await response.json()
-    return data
+      const response = await fetch(url)
+      const data = await response.json()
+      return data
   } catch (error) {
     console.log(error)
 }
@@ -12,9 +12,7 @@ async function getAPIData(url) {
 
 const theData = getAPIData('https://pokeapi.co/api/v2/pokemon/')
 .then(data => {
-    console.log(data.results)
     for (const pokemon of data.results) {
-      console.log(pokemon.url)
       getAPIData(pokemon.url)
       .then(pokedata => {
         console.log(pokedata)

@@ -44,6 +44,7 @@ function populateDOM(single_pokemon) {
 
     pokeDiv.appendChild(name)
     pokeDiv.appendChild(pic)
+    pokeDiv.appendChild(gender)
 
     mainArea.appendChild(pokeDiv)
   }

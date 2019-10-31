@@ -30,7 +30,6 @@ h1 {
 h2 {
     text-align: center;
     font-size: 5rem;
-    text-decoration: underline;
     font-family: 'Notable', sans-serif;
 }
 
@@ -125,6 +124,7 @@ nav {
     font-size: 37px;
     margin: 0 auto 1rem auto;
     -webkit-text-stroke: 1px black;
+    text-decoration: underline;
 }
 
 .projects-grid {
@@ -196,7 +196,6 @@ nav {
 .contact-section-header > h2 {
 font-size: 6rem;
 -webkit-text-stroke: 1px black;
-text-decoration: underline;
 color: rgb(255, 255, 255);
 }
 
@@ -214,6 +213,7 @@ color: rgb(255, 255, 255);
     justify-content: center;
     color: rgb(206, 161, 15);
     -webkit-text-stroke: 1px black;
+    text-decoration: underline;
 }
 
 .contact-links {

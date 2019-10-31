@@ -52,10 +52,6 @@ function getCharNumber(charURL) {
 }
 
 
-const maleCharacters = people.filter(person => person.gender === 'male')
-const femaleCharacters = people.filter(person => person.gender === 'female')
-const otherCharacters = people.filter(person => person.gender !== 'female' & person.gender !== 'male')
-console.log(otherCharacters)
 const allDivs = Array.from(mainArea.querySelectorAll('div'))
 
 
@@ -142,11 +138,42 @@ otherButton.addEventListener('click', event => {
   })
 });
 
+let allButton = document.createElement('button')
+allButton.textContent = "All Characters"
 
+allButton.addEventListener('click', () => {
+    femaleCharacters.forEach(elt => {
+    let matchedDiv = allDivs.filter(element => {
+        return element.firstChild.textContent === elt.name
+    })
+      console.log(matchedDiv)
+      matchedDiv[0].setAttribute("style", "visibility: visibile;")
+  })
+  maleCharacters.forEach(elt => {
+    let matchedDiv = allDivs.filter(element => {
+        return element.firstChild.textContent === elt.name
+    })
+      console.log(matchedDiv)
+      matchedDiv[0].setAttribute("style", "visibility: visibile;")
+  })
+  otherCharacters.forEach(elt => {
+    let matchedDiv = allDivs.filter(element => {
+        return element.firstChild.textContent === elt.name
+    })
+      console.log(matchedDiv)
+      matchedDiv[0].setAttribute("style", "visibility: visibile;")
+  })
+})
 
+mainHeader.appendChild(allButton)
 mainHeader.appendChild(maleButton)
 mainHeader.appendChild(femaleButton)
 mainHeader.appendChild(otherButton)
+
+
+const maleCharacters = people.filter(person => person.gender === 'male')
+const femaleCharacters = people.filter(person => person.gender === 'female')
+const otherCharacters = people.filter(person => person.gender !== 'female' & person.gender !== 'male')
 
 
 console.log(maleCharacters)

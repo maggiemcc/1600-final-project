@@ -51,8 +51,8 @@ function getCharNumber(charURL) {
   }
 }
 
-
 const allDivs = Array.from(mainArea.querySelectorAll('div'))
+
 
 
 let maleButton = document.createElement('button')
@@ -80,7 +80,7 @@ maleButton.addEventListener('click', () => {
       console.log(matchedDiv)
       matchedDiv[0].setAttribute("style", "display: none;")
   })
-})
+});
 
 
 let femaleButton = document.createElement('button')
@@ -138,6 +138,7 @@ otherButton.addEventListener('click', event => {
   })
 });
 
+
 let allButton = document.createElement('button')
 allButton.textContent = "All Characters"
 
@@ -174,8 +175,6 @@ mainHeader.appendChild(otherButton)
 const maleCharacters = people.filter(person => person.gender === 'male')
 const femaleCharacters = people.filter(person => person.gender === 'female')
 const otherCharacters = people.filter(person => person.gender !== 'female' & person.gender !== 'male')
-
-
 console.log(maleCharacters)
 console.log(femaleCharacters)
 console.log(otherCharacters)

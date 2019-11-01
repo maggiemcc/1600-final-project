@@ -57,7 +57,8 @@ function populateDOM(single_pokemon) {
   }
 
 
-  var card = document.querySelector('.card');
+
+var card = document.querySelector('.card');
 card.addEventListener( 'click', function() {
   card.classList.toggle('is-flipped');
 });

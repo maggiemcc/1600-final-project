@@ -213,7 +213,7 @@ color: rgb(255, 255, 255);
     justify-content: center;
     color: rgb(206, 161, 15);
     -webkit-text-stroke: 1px black;
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 .contact-links {

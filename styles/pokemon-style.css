@@ -12,6 +12,10 @@ main {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   grid-gap: 1.8rem;
+  width: 100%;
+  max-width: 2300px;
+  margin: 0 auto;
+  margin-bottom: 6rem;
 }
 
 img {

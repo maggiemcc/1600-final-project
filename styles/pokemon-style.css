@@ -1,6 +1,7 @@
 body {
   background: linear-gradient(0.25turn, #fffefe, #686868b2);
   margin: 30px;
+  font-family: sans-serif; 
 }
 
 h3 {
@@ -12,9 +13,9 @@ h3 {
 main {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  grid-gap: 1.8rem;
+  grid-gap: 1.6rem;
   width: 100%;
-  max-width: 2300px;
+  max-width: 2000px;
   margin: 0 auto;
   margin-bottom: 6rem;
 }
@@ -25,11 +26,46 @@ img {
 }
 
 
-div {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border: 3px solid black;
-  padding: 8px;
+
+
+.scene {
+  width: 180px;
+  height: 240px;
+  border: 1px solid #CCC;
+  margin: 40px 0;
+  perspective: 600px;
 }
 
+.card {
+  width: 100%;
+  height: 100%;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+  cursor: pointer;
+  position: relative;
+}
+
+.card.is-flipped {
+  transform: rotateY(180deg);
+}
+
+.card__face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  line-height: 260px;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+  backface-visibility: hidden;
+}
+
+.card__face--front {
+  background: red;
+}
+
+.card__face--back {
+  background: blue;
+  transform: rotateY(180deg);
+}

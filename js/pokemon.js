@@ -55,3 +55,6 @@ function populateDOM(single_pokemon) {
          return `0${id}`
        } else return id
   }
+
+
+  

@@ -39,7 +39,7 @@ function populateDOM(single_pokemon) {
 
     name.textContent = single_pokemon.name
 
-    pic.src = 'pokemon.json-master/images/${pokeNum}.png'
+    pic.src = '../images/${pokeNum}.png'
 
    
     pokeDiv.appendChild(pic)

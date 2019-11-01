@@ -3,12 +3,10 @@ body {
   margin: 30px;
 }
 
-
 h3 {
   font-family: 'Grenze', serif;
   font-weight: bolder;
 }
-
 
 main {
   display: grid;
@@ -19,13 +17,4 @@ main {
 img {
       border-color: #ff0000;
       width: 120px;
-}
-
-
-div {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border: 3px solid black;
-  padding: 5px;
 }

@@ -35,11 +35,11 @@ function populateDOM(single_pokemon) {
    pic.setAttribute('class', 'picDivs')
 
 
-    //let pokeNum = getPokeNumber(single_pokemon.url)
+    let pokeNum = getPokeNumber(single_pokemon.id)
 
     name.textContent = single_pokemon.name
 
-    pic.src = `../images/${single_pokemon.id}.png`
+    pic.src = `../images/${pokeNum}.png`
 
    
     pokeDiv.appendChild(pic)
@@ -50,8 +50,8 @@ function populateDOM(single_pokemon) {
     
 
   function getPokeNumber(id) {
-       if(id < 10) return '00${id}'
+       if(id < 10) return `00${id}`
        if(id > 9 && id < 100) {
-         return '0${id}'
+         return `0${id}`
        } else return id
   }

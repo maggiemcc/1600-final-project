@@ -15,10 +15,10 @@ header > h1 {
 }
 
 h1 {
-    color: rgb(0, 0, 0);
+    color: rgb(1, 5, 211);
     font-size: 1.3rem;
     font-weight: bold;
-    -webkit-text-stroke: 0.5px rgb(1, 5, 211); 
+    -webkit-text-stroke: 0.8px rgb(0, 0, 0); 
     font-family: 'Staatliches', cursive;
     text-decoration: none;
     margin: 0px;

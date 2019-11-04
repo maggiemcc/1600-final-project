@@ -1,7 +1,7 @@
 body {
     background: linear-gradient(0.25turn, #fffefe, #686868b2);
     margin: 30px;
-    background-image: url("../Images/StarfieldSimulation.gif");
+    background: center / contain repeat url("../Images/StarfieldSimulation.gif");
     font-family: sans-serif;
 }
 

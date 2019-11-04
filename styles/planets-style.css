@@ -32,7 +32,7 @@ main {
 }
 
 img {
-        border-color: #ff0000;
+        border-color: #0400ff;
         border-width: 10px;
         border-style: inset;
         width: 200px;
@@ -98,3 +98,5 @@ div {
   background: blue;
   transform: rotateY(180deg);
 }
+
+

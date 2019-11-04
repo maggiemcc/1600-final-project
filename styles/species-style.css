@@ -4,6 +4,16 @@ body {
     font-family: sans-serif;
 }
 
+header > h1 {
+    color: rgb(0, 0, 0);
+    font-size: 2rem;
+    font-weight: bold;
+    -webkit-text-stroke: 0px rgb(0, 0, 0); 
+    font-family: 'Grenze', serif;
+    text-decoration: underline;
+    margin: 0px;
+}
+
 h1 {
     color: rgb(255, 0, 0);
     font-size: 1.3rem;

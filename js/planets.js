@@ -35,3 +35,8 @@ function getCharNumber(charURL) {
 }
 
 const allDivs = Array.from(mainArea.querySelectorAll('div'))
+
+var card = document.querySelector('.card');
+card.addEventListener( 'click', function() {
+  card.classList.toggle('is-flipped');
+});

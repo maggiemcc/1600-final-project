@@ -61,6 +61,7 @@ div {
   font-weight: bold;
   font-size: 20px;
   backface-visibility: hidden;
+  font-family: 'ZCOOL XiaoWei', serif;
 }
 
 .card__face--front {

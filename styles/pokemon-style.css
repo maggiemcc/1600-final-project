@@ -87,7 +87,7 @@ img {
 }
 
 .card__face--front {
-  /* background: red; */
+   background: red;
 }
 
 .card__face--back {

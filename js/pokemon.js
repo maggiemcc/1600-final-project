@@ -27,8 +27,14 @@ let mainArea = document.querySelector('main')
 
 function populateDOM(single_pokemon) {
     let pokeDiv = document.createElement('div')
+    let pokeCard = document.createElement('div')
+    let pokeFront = document.createElement('div')
+    let pokeBack = document.createElement('div')
     let name = document.createElement('h3')
     let pic = document.createElement('img')
+
+  
+    fillCardBack(pokeBack, single_pokemon)
 
 
    pokeDiv.setAttribute('class', 'charDivs')
@@ -36,11 +42,23 @@ function populateDOM(single_pokemon) {
 
 
     let pokeNum = getPokeNumber(single_pokemon.id)
+    pokeFront.appendChild(name)
+    name.textContent = ${single_pokemon.name} height: ${single_pokemon.height}
 
-    name.textContent = single_pokemon.name
+
+
 
     pic.src = `../images/${pokeNum}.png`
+    pokeFront.appendChild(pic)
+    pokeFront.appendChild(name)
 
+    pokeCard.appendChild(pokeFront)
+    pokeCard.appendChild(pokeBack)
+    pokeScene.appendChild(pokeCard)
+
+    mainArea.appendChild(pokeScene)
+
+    pokeCard.addEvent
    
     pokeDiv.appendChild(pic)
     pokeDiv.appendChild(name)
@@ -58,7 +76,7 @@ function populateDOM(single_pokemon) {
 
 
 
-var card = document.querySelector('.card');
-card.addEventListener( 'click', function() {
-  card.classList.toggle('is-flipped');
-});
+function fillCardBack(pokeback {
+  let pokeOrder = document.createElement('p')
+  
+}

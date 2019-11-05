@@ -19,6 +19,14 @@ h1 {
   -webkit-text-stroke: 1px rgb(0, 0, 0);
 }
 
+p {
+ position: absolute;
+ bottom: 10px;
+ margin: 0px;
+ font-size: 18px;
+ line-height: 0px;
+}
+
 main {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -33,11 +41,16 @@ img {
       width: 120px;
 }
 
-div {
+.picDiv {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+
+
+
+
+
 
 .scene {
   width: 180px;
@@ -65,7 +78,7 @@ div {
   width: 100%;
   height: 100%;
   line-height: 260px;
-  color: white;
+  /* color: white; */
   text-align: center;
   font-weight: bold;
   font-size: 20px;
@@ -74,10 +87,10 @@ div {
 }
 
 .card__face--front {
-  background: red;
+  /* background: red; */
 }
 
 .card__face--back {
-  background: blue;
+  /* background: blue; */
   transform: rotateY(180deg);
 }

@@ -125,6 +125,8 @@ nav {
     justify-content: center;
     padding: 10rem 2rem;
     background:rgb(221, 240, 252);
+    font-family: 'ZCOOL XiaoWei', serif;
+    font-weight: 900;
 }
 
 .projects-section-header {

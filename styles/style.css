@@ -68,6 +68,9 @@ a:hover {
     padding: 20px;
     color: white;
     font-weight: bolder;
+        border-color: #8a8a8a;
+        border-width: 10px;
+        border-style: inset;
   }
 
 nav {

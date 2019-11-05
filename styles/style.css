@@ -65,12 +65,12 @@ a:hover {
 
 .projects-grid > a:hover {
     background:rgb(2, 0, 131);
-    padding: 20px;
+    padding: 10px;
     color: white;
     font-weight: bolder;
-        border-color: #8a8a8a;
-        border-width: 10px;
-        border-style: inset;
+    border-color: #8a8a8a;
+    border-width: 10px;
+    border-style: inset;
   }
 
 nav {

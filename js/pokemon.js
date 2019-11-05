@@ -78,7 +78,7 @@ function populateDOM(single_pokemon) {
 
 
 
-function fillCardBack(pokeback {
+function fillCardBack(pokeback) {
   let pokeOrder = document.createElement('p')
   
 }

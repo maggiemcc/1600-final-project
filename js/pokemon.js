@@ -35,14 +35,16 @@ function populateDOM(single_pokemon) {
     let pokeCard = document.createElement('div')
     let pokeFront = document.createElement('div')
     let pokeBack = document.createElement('div')
-    let name = document.createElement('h3')
+    let name = document.createElement('h4')
     let pic = document.createElement('img')
+
+    fillCardBack(pokeBack, single_pokemon)
 
 
    pokeScene.setAttribute('class', 'scene')
    pokeCard.setAttribute('class', 'card')
-   pokeFront.setAttribute('class', 'charDivs card_face card_face--front')
-   pokeBack.setAttribute('class', 'card_face card_face--back')
+   pokeFront.setAttribute('class', 'card__face card__face--front')
+   pokeBack.setAttribute('class', 'card__face card__face--back')
    pic.setAttribute('class', 'picDivs')
 
 
@@ -65,12 +67,19 @@ function populateDOM(single_pokemon) {
     });
   }
 
-  {/* <div class="scene">
+  function fillCardBack(pokeBack, data) {
+    let pokeOrder = document.createElement('p')
+    pokeOrder.textContent = data.order
+    pokeBack.appendChild(pokeOrder)
+  }
+
+
+  /* { <div class="scene">
 <div class="card">
-<div class="card_face card_face--front">front</div>
-<div class="card_face card_face--back">back</div>
+<div class="card__face card__face--front">front</div>
+<div class="card__face card__face--back">back</div>
 </div>
-</div> */}
+</div> }*/
     
 
   function getPokeNumber(id) {
@@ -79,10 +88,3 @@ function populateDOM(single_pokemon) {
          return `0${id}`
        } else return id
   }
-
-
-
-function fillCardBack(pokeback) {
-  let pokeOrder = document.createElement('p')
-  
-}

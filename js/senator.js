@@ -15,11 +15,13 @@ async function getAPIData(url) {
         allSenators = data.results[0].members
         console.log(allSenators)
         populateDOM(allSenators)
+
+    const republicans = allSenators.filter(senator => senator.party === 'R')
+    const democrats = allSenators.filter(senator => senator.party === 'D')
     })
     
     
-    const republicans = allSenators.filter(senator => senator.party === 'R')
-    const democrats = allSenators.filter(senator => senator.party === 'D')
+ 
     
     
     const container = document.querySelector('.container')
@@ -53,7 +55,7 @@ async function getAPIData(url) {
         let figure = document.createElement('div')
         figure.setAttribute('class', 'image is 48x48')
         let figureImage = document.createElement('img')
-        figureImage.src ="https://bulma.io/images/placeholders/128x128.png" alt="Placeholder thumbnail"
+        figureImage.src ="https://bulma.io/images/placeholders/128x128.png", alt="Placeholder thumbnail"
         let mediaContent = document.createElement('div')
         mediaContent.setAttribute('class', 'media-content')
         let titleP = document.createElement('p')

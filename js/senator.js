@@ -9,19 +9,17 @@ async function getAPIData(url) {
     }
     
   
-    let allSenators = { }
+    let allSenators = []
     
     const theData = getAPIData('senators.json').then(data => {
         allSenators = data.results[0].members
         console.log(allSenators)
         populateDOM(allSenators)
-
-    const republicans = allSenators.filter(senator => senator.party === 'R')
-    const democrats = allSenators.filter(senator => senator.party === 'D')
     })
     
     
- 
+    const republicans = allSenators.filter(senator => senator.party === 'R')
+    const democrats = allSenators.filter(senator => senator.party === 'D')
     
     
     const container = document.querySelector('.container')
@@ -41,8 +39,9 @@ async function getAPIData(url) {
         cardFigure.appendChild(figureImage)
         cardImage.appendChild(cardFigure)
         card.appendChild(populateCardContent(senator))
+        card.appendChild(populateCardContent(senator))
         container.appendChild(card)
-       })
+    })
     }
 
     function populateCardContent(senator) {
@@ -52,17 +51,24 @@ async function getAPIData(url) {
         media.setAttribute('class', 'media')
         let mediaLeft = document.createElement('div')
         mediaLeft.setAttribute('class', 'media-left')
-        let figure = document.createElement('div')
+        let figure = document.createElement('figure')
         figure.setAttribute('class', 'image is 48x48')
         let figureImage = document.createElement('img')
-        figureImage.src ="https://bulma.io/images/placeholders/128x128.png", alt="Placeholder thumbnail"
+        figureImage.src = "https://bulma.io/images/placeholders/96x96.png"
+        figureImage.alt="Placeholder thumbnail"
         let mediaContent = document.createElement('div')
         mediaContent.setAttribute('class', 'media-content')
         let titleP = document.createElement('p')
         titleP.setAttribute('class', 'title is-4')
-        let subtitleP = document('p')
+        let subtitleP = document.createElement('p')
         subtitleP.setAttribute('class', 'subtitle is-6')
 
         mediaContent.appendChild(titleP)
         mediaContent.appendChild(subtitleP)
+        figure.appendChild(figureImage)
+        mediaLeft.appendChild(figure)
+        media.appendChild(mediaLeft)
+        media.appendChild(mediaContent)
+        cardContent.appendChild(media)
+        return cardContent
     }

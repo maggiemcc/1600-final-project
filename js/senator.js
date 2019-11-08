@@ -31,18 +31,20 @@ async function getAPIData(url) {
         let cardImage = document.createElement('div')
         cardImage.setAttribute('class', 'card-image')
         let cardFigure = document.createElement('figure')
-        cardFigure.setAttribute('class', 'image is-4by3')
+       // cardFigure.setAttribute('class', 'image is-4by3')
         let figureImage = document.createElement('img')
         figureImage.src = `https://www.congress.gov/img/member/${senator.id.toLowerCase()}_200.jpg`
-        figureImage.alt = "placeholder image"
+        figureImage.alt = 'Placeholder image'
+
 
         cardFigure.appendChild(figureImage)
         cardImage.appendChild(cardFigure)
+        card.appendChild(cardImage)
         card.appendChild(populateCardContent(senator))
-        card.appendChild(populateCardContent(senator))
-        container.appendChild(card)
-    })
+        // container.appendChild(card)
+        })
     }
+
 
     function populateCardContent(senator) {
         let cardContent = document.createElement('div')
@@ -52,7 +54,7 @@ async function getAPIData(url) {
         let mediaLeft = document.createElement('div')
         mediaLeft.setAttribute('class', 'media-left')
         let figure = document.createElement('figure')
-        figure.setAttribute('class', 'image is 48x48')
+        figure.setAttribute('class', 'image is-48x48')
         let figureImage = document.createElement('img')
         figureImage.src = "https://bulma.io/images/placeholders/96x96.png"
         figureImage.alt="Placeholder thumbnail"
@@ -70,5 +72,6 @@ async function getAPIData(url) {
         media.appendChild(mediaLeft)
         media.appendChild(mediaContent)
         cardContent.appendChild(media)
+
         return cardContent
     }

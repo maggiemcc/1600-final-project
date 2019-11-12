@@ -15,6 +15,7 @@ async function getAPIData(url) {
         allSenators = data.results[0].members
         console.log(allSenators)
         populateDOM(allSenators)
+        simpleSenators = mapSenators(allSenators)
     })
     
     
@@ -23,6 +24,24 @@ async function getAPIData(url) {
     
     
     const container = document.querySelector('.container')
+    console.log(republicans, democrats)
+
+
+    //map example
+    
+    function mapSenators(allOfThem) {
+   const resultmap = allOfThem.map(senator => {
+        return {
+            id: senator.id,
+            name: `${senator.name}`,
+            party: senator.party,
+            birth_date: senator.date_of_birth,
+            age: _calculateAge(new Date(senatator.date_of_birth)),
+        }
+    })
+    
+    }
+
     
     function populateDOM(senatorArray) {
        senatorArray.forEach(senator => {
@@ -67,9 +86,10 @@ async function getAPIData(url) {
         let titleP = document.createElement('p')
         titleP.setAttribute('class', 'title is-4')
         titleP.textContent = `${senator.first_name} ${senator.last_name}`
-
         let subtitleP = document.createElement('p')
         subtitleP.setAttribute('class', 'subtitle is-6')
+        subtitleP.textContent = `${senator.date_of_birth} Age: )}`
+        
 
         let contentDiv = document.createElement('div')
         contentDiv.setAttribute('class', 'content')
@@ -80,6 +100,7 @@ async function getAPIData(url) {
         timeSection.dateTime = `${newDate}`
         timeSection.textContent = `${newDate}`
 
+
         mediaContent.appendChild(titleP)
         mediaContent.appendChild(subtitleP)
         figure.appendChild(figureImage)
@@ -89,6 +110,9 @@ async function getAPIData(url) {
         contentDiv.appendChild(contentBreak)
         contentDiv.appendChild(timeSection)
         cardContent.appendChild(media)
-        //cardContent.appendChild(ContentDiv)
+        cardContent.appendChild(ContentDiv)
         return cardContent
     }
+
+    // function_calculateAge(birthday)
+    // console.log(_calculateAge(new Date(`1940-07-03`)))

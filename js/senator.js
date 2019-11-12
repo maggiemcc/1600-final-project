@@ -65,13 +65,24 @@ async function getAPIData(url) {
         let subtitleP = document.createElement('p')
         subtitleP.setAttribute('class', 'subtitle is-6')
 
+        let contentDiv = document.createElement('div')
+        contentDiv.setAttribute('class', 'content')
+        contentDiv.textContent = 'Lorem ipsum dolor sit ametl consectetur adipiscing elit, phasellus nec iaculis mauris.'
+        let contentBreak = document.createElement('br')
+        let timeSection = document.createElement('time')
+        let newDate = new Date()
+        timeSection.dateTime = `${newDate}`
+        timeSection.textContent = `${newDate}`
+
         mediaContent.appendChild(titleP)
         mediaContent.appendChild(subtitleP)
         figure.appendChild(figureImage)
         mediaLeft.appendChild(figure)
         media.appendChild(mediaLeft)
         media.appendChild(mediaContent)
+        contentDiv.appendChild(contentBreak)
+        contentDiv.appendChild(timeSection)
         cardContent.appendChild(media)
-
+        
         return cardContent
     }

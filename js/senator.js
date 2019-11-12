@@ -33,13 +33,13 @@ async function getAPIData(url) {
    const resultmap = allOfThem.map(senator => {
         return {
             id: senator.id,
-            name: `${senator.name}`,
+            name: `${senator.first_name} ${senator.last_name}`,
             party: senator.party,
             birth_date: senator.date_of_birth,
             age: _calculateAge(new Date(senatator.date_of_birth)),
         }
     })
-    
+    return resultMap
     }
 
     

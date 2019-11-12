@@ -54,14 +54,20 @@ async function getAPIData(url) {
         let mediaLeft = document.createElement('div')
         mediaLeft.setAttribute('class', 'media-left')
         let figure = document.createElement('figure')
-        figure.setAttribute('class', 'image is-48x48')
+        
+        figure.setAttribute('class', 'image is-96x96')
         let figureImage = document.createElement('img')
-        figureImage.src = "https://bulma.io/images/placeholders/96x96.png"
+        if(senator.party === "D") {
+        figureImage.src = "/Images/donkey.png"}
+        if(senator.party === "R") {
+            figureImage.src = "/Images/Republican.png"}
         figureImage.alt="Placeholder thumbnail"
         let mediaContent = document.createElement('div')
         mediaContent.setAttribute('class', 'media-content')
         let titleP = document.createElement('p')
         titleP.setAttribute('class', 'title is-4')
+        titleP.textContent = `${senator.first_name} ${senator.last_name}`
+
         let subtitleP = document.createElement('p')
         subtitleP.setAttribute('class', 'subtitle is-6')
 
@@ -83,6 +89,6 @@ async function getAPIData(url) {
         contentDiv.appendChild(contentBreak)
         contentDiv.appendChild(timeSection)
         cardContent.appendChild(media)
-        
+        //cardContent.appendChild(ContentDiv)
         return cardContent
     }

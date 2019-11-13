@@ -4,47 +4,47 @@ async function getAPIData(url) {
         const data = await response.json()
         return data
       } catch (error) {
-        console.error(error)
+        console.error(error)
     }
     }
     
   
     let allSenators = []
-    
     const theData = getAPIData('senators.json').then(data => {
         allSenators = data.results[0].members
         console.log(allSenators)
         populateDOM(allSenators)
-        simpleSenators = mapSenators(allSenators)
+        // simpleSenators = mapSenators(allSenators)
     })
     
     
     const republicans = allSenators.filter(senator => senator.party === 'R')
     const democrats = allSenators.filter(senator => senator.party === 'D')
     
-    
-    const container = document.querySelector('.container')
     console.log(republicans, democrats)
+
+    const container = document.querySelector('.container')
+    
 
 
     //map example
     
-    function mapSenators(allOfThem) {
-   const resultmap = allOfThem.map(senator => {
-        return {
-            id: senator.id,
-            name: `${senator.first_name} ${senator.last_name}`,
-            party: senator.party,
-            birth_date: senator.date_of_birth,
-            age: _calculateAge(new Date(senatator.date_of_birth)),
-        }
-    })
-    return resultMap
-    }
+//     function mapSenators(allOfThem) {
+//    const resultmap = allOfThem.map(senator => {
+//         return {
+//             id: senator.id,
+//             name: `${senator.first_name} ${senator.last_name}`,
+//             party: senator.party,
+//             birth_date: senator.date_of_birth,
+//             age: _calculateAge(new Date(senatator.date_of_birth)),
+//         }
+//     })
+//     return resultMap
+//     }
 
     
     function populateDOM(senatorArray) {
-       senatorArray.forEach(senator => {
+        senatorArray.forEach(senator => {
         let card = document.createElement('div')
         card.setAttribute('class', 'card')
         let cardImage = document.createElement('div')
@@ -55,12 +55,11 @@ async function getAPIData(url) {
         figureImage.src = `https://www.congress.gov/img/member/${senator.id.toLowerCase()}_200.jpg`
         figureImage.alt = 'Placeholder image'
 
-
         cardFigure.appendChild(figureImage)
         cardImage.appendChild(cardFigure)
         card.appendChild(cardImage)
         card.appendChild(populateCardContent(senator))
-        // container.appendChild(card)
+        container.appendChild(card)
         })
     }
 
@@ -73,7 +72,6 @@ async function getAPIData(url) {
         let mediaLeft = document.createElement('div')
         mediaLeft.setAttribute('class', 'media-left')
         let figure = document.createElement('figure')
-        
         figure.setAttribute('class', 'image is-96x96')
         let figureImage = document.createElement('img')
         if(senator.party === "D") {

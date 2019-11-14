@@ -36,6 +36,7 @@ function populateDOM(single_pokemon) {
     let pokeFront = document.createElement('div')
     let pokeBack = document.createElement('div')
     let name = document.createElement('h4')
+    let type = document.createElement('h5')
     let pic = document.createElement('img')
 
     fillCardBack(pokeBack, single_pokemon)
@@ -54,7 +55,6 @@ function populateDOM(single_pokemon) {
 
     pic.src = `../images/${pokeNum}.png`
     pokeFront.appendChild(pic)
-    pokeFront.appendChild(name)
 
     pokeCard.appendChild(pokeFront)
     pokeCard.appendChild(pokeBack)

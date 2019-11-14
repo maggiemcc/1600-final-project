@@ -3,17 +3,6 @@
   const respond = await fetch(url)
   return await response.json()
 } */
-//data.stats[0].base_stat
-class Pokemon {
-  constructor(id, name, stats) {
-    this.id = id
-    this.name = name
-    this.stats = stats
-  }
-}
-
-const Maggie = new Pokemon(1000, 'Maggie', )
-
 
 
 async function getAPIData(url) {
@@ -91,7 +80,7 @@ function populateDOM(single_pokemon) {
     let pokeOrder = document.createElement('h5')
     let pokeHP = document.createElement('h5')
     pokeHP.textContent = `${data.id} ${data.name[0].toUpperCase()} ${data.name.slice(1)}`
-    pokeHP.textContent = data.stats[0].base_stat
+    // pokeHP.textContent = data.stats[0].base_stat
     pokeBack.appendChild(pokeHP)
   }
     
@@ -103,3 +92,15 @@ function populateDOM(single_pokemon) {
        } else return id
   }
 
+
+// data.stats[0].base_stat
+class Pokemon {
+  constructor(id, name, stats) {
+    this.id = id
+    this.name = name
+    this.base_stats = stats
+  }
+}
+
+const Maggie = new Pokemon(900, 'Maggie', 130);
+populateDOM(Maggie)

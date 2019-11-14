@@ -102,5 +102,5 @@ class Pokemon {
   }
 }
 
-const Maggie = new Pokemon(900, 'Maggie', 130);
-populateDOM(Maggie)
+const Davemon = new Pokemon(900, 'Davemon', 130);
+populateDOM(Davemon)

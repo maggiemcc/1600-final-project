@@ -52,8 +52,8 @@ function populateDOM(single_pokemon) {
 
     let pokeNum = getPokeNumber(single_pokemon.id)
     pokeBack.appendChild(name)
-    name.textContent = `${single_pokemon.name} height: ${single_pokemon.height}`
-
+    // name.textContent = `${single_pokemon.name} height: ${single_pokemon.height}`
+    name.textContent = `height: ${single_pokemon.height}`
     pic.src = `../images/${pokeNum}.png`
     pokeFront.appendChild(pic)
   
@@ -77,7 +77,7 @@ function populateDOM(single_pokemon) {
   }
 
   function fillCardBack(pokeBack, data) {
-    let pokeOrder = document.createElement('h5')
+    // let pokeOrder = document.createElement('h5')
     let pokeHP = document.createElement('h5')
     pokeHP.textContent = `${data.id} ${data.name[0].toUpperCase()} ${data.name.slice(1)}`
     // pokeHP.textContent = data.stats[0].base_stat

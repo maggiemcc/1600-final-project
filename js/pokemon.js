@@ -80,8 +80,6 @@ function populateDOM(single_pokemon) {
     let pokeHP = document.createElement('h5')
     pokeHP.textContent = `${data.id} ${data.name[0].toUpperCase()} ${data.name.slice(1)}`
     pokeHP.textContent = data.stats[0].base_stat
-    pokeOrder.textContent = data.order
-    pokeBack.appendChild(pokeOrder)
     pokeBack.appendChild(pokeHP)
   }
     

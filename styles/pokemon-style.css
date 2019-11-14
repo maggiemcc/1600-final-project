@@ -10,7 +10,7 @@ h1 {
   text-align: center;
   text-decoration: underline;
   color: blue;
-  -webkit-text-stroke: 1px rgb(0, 0, 0);
+  -webkit-text-stroke: .6px rgb(0, 0, 0);
 }
 
 h4 {

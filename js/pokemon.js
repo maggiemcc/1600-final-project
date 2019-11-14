@@ -3,6 +3,18 @@
   const respond = await fetch(url)
   return await response.json()
 } */
+//data.stats[0].base_stat
+class Pokemon {
+  constructor(id, name, stats) {
+    this.id = id
+    this.name = name
+    this.stats = stats
+  }
+}
+
+const Maggie = new Pokemon(1000, 'Maggie', )
+
+
 
 async function getAPIData(url) {
   try {
@@ -90,3 +102,4 @@ function populateDOM(single_pokemon) {
          return `0${id}`
        } else return id
   }
+

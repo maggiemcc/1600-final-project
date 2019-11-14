@@ -1,6 +1,6 @@
 body {
   background: linear-gradient(0.25turn, #fffefe, #686868b2);
-  margin: 30px;
+  margin: 30px 0 30px 0;
   font-family: sans-serif; 
 }
 
@@ -39,7 +39,7 @@ main {
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   grid-gap: 3.2rem;
   width: 100%;
-  max-width: 1500px;
+  max-width: 2000px;
   margin: 0 auto;
   margin-bottom: 6rem;
 }

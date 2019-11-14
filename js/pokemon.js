@@ -95,12 +95,13 @@ function populateDOM(single_pokemon) {
 
 // data.stats[0].base_stat
 class Pokemon {
-  constructor(id, name, stats) {
+  constructor(id, name, order, stats) {
     this.id = id
     this.name = name
+    this.order = order
     this.base_stats = stats
   }
 }
 
-const Davemon = new Pokemon(900, 'Davemon', 130);
+const Davemon = new Pokemon(900, 'Davemon', 28, 130);
 populateDOM(Davemon)

@@ -14,7 +14,7 @@ async function getAPIData(url) {
         allSenators = data.results[0].members
         console.log(allSenators)
         populateDOM(allSenators)
-        // simpleSenators = mapSenators(allSenators)
+        simpleSenators = mapSenators(allSenators)
     })
     
     
@@ -73,25 +73,26 @@ async function getAPIData(url) {
         mediaLeft.setAttribute('class', 'media-left')
         let figure = document.createElement('figure')
         figure.setAttribute('class', 'image is-96x96')
+
         let figureImage = document.createElement('img')
-        if(senator.party === "D") {
-        figureImage.src = "/Images/donkey.png"}
-        if(senator.party === "R") {
-            figureImage.src = "/Images/Republican.png"}
+        //if(senator.party === "D") {
+        //figureImage.src = "/Images/donkey.png"}
+        //if(senator.party === "R") {
+        //    figureImage.src = "/Images/Republican.png"}
         figureImage.alt="Placeholder thumbnail"
         let mediaContent = document.createElement('div')
         mediaContent.setAttribute('class', 'media-content')
         let titleP = document.createElement('p')
         titleP.setAttribute('class', 'title is-4')
-        titleP.textContent = `${senator.first_name} ${senator.last_name}`
+        //titleP.textContent = `${senator.first_name} ${senator.last_name}`
         let subtitleP = document.createElement('p')
         subtitleP.setAttribute('class', 'subtitle is-6')
-        subtitleP.textContent = `${senator.date_of_birth} Age: )}`
+        //subtitleP.textContent = `${senator.date_of_birth} Age: )}`
         
 
         let contentDiv = document.createElement('div')
         contentDiv.setAttribute('class', 'content')
-        contentDiv.textContent = 'Lorem ipsum dolor sit ametl consectetur adipiscing elit, phasellus nec iaculis mauris.'
+        contentDiv.textContent = 'Lorem ipsum dolor sit lis mauris.'
         let contentBreak = document.createElement('br')
         let timeSection = document.createElement('time')
         let newDate = new Date()
@@ -105,10 +106,10 @@ async function getAPIData(url) {
         mediaLeft.appendChild(figure)
         media.appendChild(mediaLeft)
         media.appendChild(mediaContent)
-        contentDiv.appendChild(contentBreak)
-        contentDiv.appendChild(timeSection)
+        // contentDiv.appendChild(contentBreak)
+        // contentDiv.appendChild(timeSection)
         cardContent.appendChild(media)
-        cardContent.appendChild(ContentDiv)
+        // cardContent.appendChild(ContentDiv)
         return cardContent
     }
 

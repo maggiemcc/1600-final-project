@@ -49,12 +49,12 @@ function populateDOM(single_pokemon) {
 
 
     let pokeNum = getPokeNumber(single_pokemon.id)
-    
     pokeBack.appendChild(name)
     name.textContent = `${single_pokemon.name} height: ${single_pokemon.height}`
 
     pic.src = `../images/${pokeNum}.png`
     pokeFront.appendChild(pic)
+  
 
     pokeCard.appendChild(pokeFront)
     pokeCard.appendChild(pokeBack)
@@ -63,11 +63,9 @@ function populateDOM(single_pokemon) {
     mainArea.appendChild(pokeScene) 
     
     pokeCard.addEventListener( 'click', function() {
-      pokeCard.classList.toggle('is-flipped');
+    okeCard.classList.toggle('is-flipped');
     });
   }
-
-
 
 
   function fillCardBack(pokeBack, data) {

@@ -43,11 +43,14 @@ main {
 }
 
 img {
-      width: 120px;
+      width: 170px;
+      padding: 40px 10px 0px 0;
 }
 
 .picDiv {
   width: 100%;
+ 
+  
 }
 
 

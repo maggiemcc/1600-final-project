@@ -39,7 +39,7 @@ main {
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   grid-gap: 3.2rem;
   width: 100%;
-  max-width: 2000px;
+  max-width: 1800px;
   margin: 0 auto;
   margin-bottom: 6rem;
 }

@@ -115,3 +115,12 @@ async function getAPIData(url) {
 
     // function_calculateAge(birthday)
     // console.log(_calculateAge(new Date(`1940-07-03`)))
+
+
+
+//reduce example
+    const testArray = [5,10,15,20,25,30,35,40,45,50]
+
+const testReduce = testArray.reduce((acc, num) => {
+
+}, 0)

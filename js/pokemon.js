@@ -77,6 +77,8 @@ function populateDOM(single_pokemon) {
 
   function fillCardBack(pokeBack, data) {
     let pokeOrder = document.createElement('p')
+    let pokeHP = document.createElement('h5')
+    pokeHP.textContent = data.stats[0].base_stat
     pokeOrder.textContent = data.order
     pokeBack.appendChild(pokeOrder)
   }

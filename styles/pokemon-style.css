@@ -35,6 +35,16 @@ p {
  font-family: 'Pacifico', cursive;
 }
 
+h5 {
+  position: absolute;
+  bottom: 15px;
+  padding: 60px 15px 15px 15px;
+  margin: 0px;
+  font-size: 18px;
+  line-height: 0px;
+  font-family: 'Pacifico', cursive;
+ }
+
 main {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));

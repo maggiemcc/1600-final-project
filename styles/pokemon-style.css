@@ -15,14 +15,15 @@ h1 {
 
 h4 {
   /* position: absolute;
-  bottom: 10px; */
+  bottom: 10px;
+  left: 20px; */
   text-align: center;
   margin: 0px;
   padding: 100px 0px 0px 0px;
   line-height: 30px;
   font-family: 'ZCOOL XiaoWei', serif;
-  font-size: 20px;
-  /* left: 20px; */
+  font-size: 30px;
+  
 }
 
 p {

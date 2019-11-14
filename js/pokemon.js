@@ -63,7 +63,7 @@ function populateDOM(single_pokemon) {
     mainArea.appendChild(pokeScene) 
     
     pokeCard.addEventListener( 'click', function() {
-    okeCard.classList.toggle('is-flipped');
+    pokeCard.classList.toggle('is-flipped');
     });
   }
 

@@ -99,11 +99,11 @@ img {
 
 .card__face--front {
    background: white;
-   border: 2px solid red;
+   border: 5px solid red;
 }
 
 .card__face--back {
   background: white;
-  border: 2px solid blue;
+  border: 5px solid blue;
   transform: rotateY(180deg);
 }

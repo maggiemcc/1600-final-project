@@ -122,5 +122,11 @@ async function getAPIData(url) {
     const testArray = [5,10,15,20,25,30,35,40,45,50]
 
 const testReduce = testArray.reduce((acc, num) => {
-
+    return acc + num
 }, 0)
+
+function getOldestSenator(arrayOfSenators) {
+    return arrayOfSenators.reduce((acc, senator) => {
+        return (oldest.age || 0)
+    }, {})
+}

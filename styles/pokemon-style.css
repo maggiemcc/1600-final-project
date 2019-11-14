@@ -37,7 +37,7 @@ p {
 main {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  grid-gap: 3.2rem;
+  grid-gap: 3rem;
   width: 100%;
   max-width: 1800px;
   margin: 0 auto;
@@ -45,7 +45,7 @@ main {
 }
 
 img {
-      width: 170px;
+      width: 160px;
       padding: 40px 10px 0px 0;
 }
 

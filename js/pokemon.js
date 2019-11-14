@@ -39,6 +39,7 @@ function populateDOM(single_pokemon) {
     let pic = document.createElement('img')
 
     fillCardFront(pokeFront, single_pokemon)
+    fillCardBack(pokeBack, single_pokemon)
 
 
    pokeScene.setAttribute('class', 'scene')
@@ -72,6 +73,12 @@ function populateDOM(single_pokemon) {
     let pokeOrder = document.createElement('p')
     pokeOrder.textContent = data.order
     pokeFront.appendChild(pokeOrder)
+  }
+
+  function fillCardBack(pokeBack, data) {
+    let pokeOrder = document.createElement('p')
+    pokeOrder.textContent = data.order
+    pokeBack.appendChild(pokeOrder)
   }
     
 

@@ -94,10 +94,12 @@ img {
 }
 
 .card__face--front {
-   /* background: red; */
+   background: white;
+   border: 1px solid red;
 }
 
 .card__face--back {
-  /* background: blue; */
+  background: white;
+  border: 1px solid blue;
   transform: rotateY(180deg);
 }

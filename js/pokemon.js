@@ -42,14 +42,12 @@ function populateDOM(single_pokemon) {
     fillCardFront(pokeFront, single_pokemon)
     fillCardBack(pokeBack, single_pokemon)
 
-
+   pic.setAttribute('class', 'picDivs')
    pokeScene.setAttribute('class', 'scene')
    pokeCard.setAttribute('class', 'card')
    pokeFront.setAttribute('class', 'card__face card__face--front')
    pokeBack.setAttribute('class', 'card__face card__face--back')
-   pic.setAttribute('class', 'picDivs')
-
-
+  
     let pokeNum = getPokeNumber(single_pokemon.id)
     pokeBack.appendChild(name)
     // name.textContent = `${single_pokemon.name} height: ${single_pokemon.height}`

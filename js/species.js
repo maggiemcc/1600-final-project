@@ -1,37 +1,74 @@
-import { species } from '../Assets/species.js'
+const cards = document.querySelectorAll('.memory-card');
 
+let hasFlippedCard = false;
+let lockBoard = false;
+let firstCard, secondCard;
 
-let mainHeader = document.querySelector('header')
-let mainArea = document.querySelector('main')
+function flipCard() {
+  if (lockBoard) return;
+  if (this === firstCard) return;
 
+  this.classList.add('flip');
 
+  if (!hasFlippedCard) {
+    //first click
+    hasFlippedCard = true;
+    firstCard = this;
 
-  
-species.forEach(function(species) {
-    let speciesDiv = document.createElement('div')
-    let name = document.createElement('h1')
-    let pic = document.createElement('img')
+    return;
+  } 
 
-    speciesDiv.appendChild(name)
-    speciesDiv.appendChild(pic)
+    //second click
+    hasFlippedCard = false;
+    secondCard = this;
 
-    let charNum = getCharNumber(species.url)
-   
-    name.textContent = species.name
-    pic.src = `https://starwars-visualguide.com/assets/img/species/${charNum}.jpg`
-
-    
-    mainArea.appendChild(speciesDiv)
-})
-
-function getCharNumber(charURL) {
-  let end = charURL.lastIndexOf('/')
-  let charID = charURL.substring(end -2, end)
-  if(charID.indexOf('/') !== -1 ) {
-    return charID.slice(1,2)
-  } else {
-    return charID
+    checkForMatch();
   }
+
+
+function checkForMatch() {
+  let isMatch = firstCard.dataset.framework === 
+  secondCard.dataset.framework;
+  
+  isMatch ? disableCards() : unflipCards();
+  }
+
+function disableCards() {
+  //match cards
+  firstCard.removeEventListner('click', flipCard);
+  secondCard.removeEventListner('click', flipCard);
+
+  resetBoard();
 }
 
-const allDivs = Array.from(mainArea.querySelectorAll('div'))
+function unflipCards() {
+   //not a match
+   lockBoard = true;
+   setTimeout(() => {
+    firstCard.classList.remove('flip');
+    secondCard.classList.remove('flip');
+
+    resetBoard();
+  }, 1500);
+}
+
+
+function resetBoard() {
+  [hasFlippedCard, lockBoard] = [false, false];
+  [firstCard, secondCard] = [null, null];
+}
+
+
+//shuffle, immediately invoked
+(function shuffle() {
+  cards.forEach(card => {
+    let randomPos = Math.floor(Math.random() * 12)
+    card.style.order = randomPos;
+  });
+})();
+
+
+
+cards.forEach(card => card.addEventListener('click', flipCard))
+
+

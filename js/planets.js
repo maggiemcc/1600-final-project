@@ -48,7 +48,7 @@ function populateDOM(single_planets) {
    planetsFront.setAttribute('class', 'card__face card__face--front')
    planetsBack.setAttribute('class', 'card__face card__face--back')
   
-    let planetsNum = getplanetsNumber(single_planets.id)
+    let planetsNum = getplanetsNumber(single_planets)
     planetsBack.appendChild(name)
     name.textContent = `${single_planets.name}`
     pic.src = `../planets/${planetsNum}.jpg`
@@ -68,9 +68,9 @@ function populateDOM(single_planets) {
 
 
   function fillCardFront(planetsFront, data) {
-    let planetsOrder = document.createElement('p')
-    planetsOrder.textContent = data.order
-    planetsFront.appendChild(planetsOrder)
+    let planetsrotation_period = document.createElement('p')
+    planetsrotation_period.textContent = data.rotation_period
+    planetsFront.appendChild(planetsrotation_period)
   }
 
   function fillCardBack(planetsBack, data) {

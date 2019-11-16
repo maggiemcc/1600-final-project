@@ -122,9 +122,9 @@ h1 {
   font-family: 'ZCOOL XiaoWei', serif;
   font-size: 5rem;
   text-align: center;
-  text-decoration: underline;
+  text-decoration: none;
   color: blue;
-  -webkit-text-stroke: .6px rgb(0, 0, 0);
+  -webkit-text-stroke: .9px rgb(255, 255, 255);
 }
 
 h4 {

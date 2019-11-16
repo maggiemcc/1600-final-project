@@ -91,14 +91,14 @@ function populateDOM(single_planets) {
 
 
 // data.stats[0].base_stat
-// class planets {
-//   constructor(id, name, order, stats) {
-//     this.id = id
-//     this.name = name
-//     this.order = order
-//     this.base_stats = stats
-//   }
-// }
+class planets {
+  constructor(id, name, rotation_period, diameter) {
+    this.id = id
+    this.name = name
+    this.rotation_period = rotation_period
+    this.diameter = diameter
+  }
+}
 
-// const Davemon = new planets(900, 'Davemon', 28, 130);
-// populateDOM(Davemon)
+const Maggies = new planets(900, 'Maggies Planet', 28, 1000000);
+populateDOM(Maggies)

@@ -16,7 +16,6 @@ body {
     font-weight: 400;
     line-height: 1.4;
     color: white;
-    
 }
 
 h1 {
@@ -148,7 +147,7 @@ nav {
   grid-gap: 2.5rem;
   width: 100%;
   max-width: 1250px;
-  margin: 0 auto;
+  margin: auto;
   margin-bottom: 6rem;
 }
 
@@ -171,6 +170,7 @@ nav {
     font-weight: bold;
     color: black;
     text-align: center;
+    height: 400px;
 }
 
 .code {

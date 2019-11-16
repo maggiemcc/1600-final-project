@@ -48,10 +48,11 @@ function populateDOM(single_planets) {
    planetsFront.setAttribute('class', 'card__face card__face--front')
    planetsBack.setAttribute('class', 'card__face card__face--back')
   
+   
     let planetsNum = getplanetsNumber(single_planets)
     planetsBack.appendChild(name)
     name.textContent = `${single_planets.name}`
-    pic.src = `../planets/${planetsNum}.jpg`
+    pic.src = `../Planets/${planetsNum}.jpg`
     planetsFront.appendChild(pic)
   
 

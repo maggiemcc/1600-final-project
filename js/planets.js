@@ -38,6 +38,7 @@ function populateDOM(single_planets) {
     let planetsBack = document.createElement('div')
     let name = document.createElement('h4')
     let pic = document.createElement('img')
+    let terrain = document.createElement('h5')
 
     fillCardFront(planetsFront, single_planets)
     fillCardBack(planetsBack, single_planets)
@@ -48,12 +49,13 @@ function populateDOM(single_planets) {
    planetsFront.setAttribute('class', 'card__face card__face--front')
    planetsBack.setAttribute('class', 'card__face card__face--back')
   
-   
+
+    
+
     let planetsName = getplanetsName(single_planets.name)
     planetsBack.appendChild(name)
     name.textContent = `${single_planets.name}`
     pic.src = `../planets/${planetsName}.jpg`
-    // pic.src = `https://starwars-visualguide.com/assets/img/planets/${planetsNum}.jpg`
     planetsFront.appendChild(pic)
   
 
@@ -79,11 +81,12 @@ function populateDOM(single_planets) {
     let planetsDiameter = document.createElement('h5')
     planetsDiameter.textContent = data.diameter
     planetsBack.appendChild(planetsDiameter)
+
+    let planetsTerrain = document.createElement('h4')
+    planetsTerrain.textContent = data.terrain
+    planetsBack.appendChild(planetsTerrain)
   }
     
-
-
-
 
 
   function getplanetsName(name) {

@@ -127,6 +127,15 @@ h1 {
   -webkit-text-stroke: .9px rgb(255, 255, 255);
 }
 
+h2 {
+  font-family: 'ZCOOL XiaoWei', serif;
+  font-size: 3rem;
+  text-align: center;
+  text-decoration: none;
+  color: red;
+  -webkit-text-stroke: .9px rgb(255, 255, 255);
+}
+
 h4 {
   /* position: absolute;
   bottom: 10px;
@@ -145,7 +154,7 @@ p {
  bottom: 15px;
  padding: 15px 15px 15px 15px;
  margin: 0px;
- font-size: 10px;
+ font-size: 20px;
  line-height: 0px;
  font-family: 'Pacifico', cursive;
 }

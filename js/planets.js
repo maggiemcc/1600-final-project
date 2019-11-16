@@ -49,10 +49,10 @@ function populateDOM(single_planets) {
    planetsBack.setAttribute('class', 'card__face card__face--back')
   
    
-    let planetsNum = getplanetsNumber(single_planets.id)
+    let planetsName = getplanetsName(single_planets.name)
     planetsBack.appendChild(name)
     name.textContent = `${single_planets.name}`
-    pic.src = `../planets/${planetsNum}.jpg`
+    pic.src = `../planets/${planetsName}.jpg`
     // pic.src = `https://starwars-visualguide.com/assets/img/planets/${planetsNum}.jpg`
     planetsFront.appendChild(pic)
   
@@ -86,11 +86,11 @@ function populateDOM(single_planets) {
 
 
 
-  function getplanetsNumber(id) {
-       if(id < 10) return `00${id}`
-       if(id > 9 && id < 100) {
-         return `0${id}`
-       } else return id
+  function getplanetsName(name) {
+       if(name < 10) return `00${name}`
+       if(name > 9 && name < 100) {
+         return `0${name}`
+       } else return name
   }
 
 
@@ -104,5 +104,5 @@ class planets {
   }
 }
 
-const Maggies = new planets(900, 'Maggies Planet', 28, 1000000);
+const Maggies = new planets(900, 'Maggies Planet', 28, 12742);
 populateDOM(Maggies)

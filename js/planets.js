@@ -81,11 +81,12 @@ function populateDOM(single_planets) {
     planetsDiameter.textContent = data.diameter
     planetsBack.appendChild(planetsDiameter)
 
-    let planetsTerrain = document.createElement('h3')
-    planetsTerrain.textContent = data.terrain
-    planetsBack.appendChild(planetsTerrain)
+    let planetsPopulation = document.createElement('h3')
+    planetsPopulation.textContent = data.population
+    planetsBack.appendChild(planetsPopulation)
   }
     
+
 
 
   function getplanetsName(name) {
@@ -98,16 +99,17 @@ function populateDOM(single_planets) {
 
 // data.stats[0].base_stat
 class planets {
-  constructor(id, name, rotation_period, diameter) {
+  constructor(id, name, rotation_period, diameter, population) {
     this.id = id
     this.name = name
     this.rotation_period = rotation_period
     this.diameter = diameter
+    this.population = population
   }
 }
 
-const Maggies = new planets(900, 'Maggies Planet', 24, 12742);
+const Maggies = new planets(900, 'Maggies Planet (Earth)', 24, 12742, '7.7 billion');
 populateDOM(Maggies)
 
-const Krypton = new planets(900, 'Krypton', 27, 1095);
+const Krypton = new planets(900, 'Krypton', 27, 1095, 'was 1.4 billion');
 populateDOM(Krypton)

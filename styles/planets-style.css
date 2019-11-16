@@ -136,19 +136,6 @@ h2 {
   -webkit-text-stroke: .9px rgb(255, 255, 255);
 }
 
-h4 {
-  /* position: absolute;
-  bottom: 10px;
-  left: 20px; */
-  text-align: center;
-  margin: 0px;
-  padding: 100px 0px 0px 0px;
-  line-height: 0px;
-  font-family: 'ZCOOL XiaoWei', serif;
-  font-size: 30px;
-  
-}
-
 h3 {
   /* position: absolute; */
   /*bottom: 10px;
@@ -158,9 +145,24 @@ h3 {
   padding: 20px 0px 0px 0px;
   line-height: 15px;
   font-family: 'ZCOOL XiaoWei', serif;
-  font-size: 15px;
+  font-size: 20px;
   
 }
+
+h4 {
+  /* position: absolute; */
+  /* bottom: 10px; */
+  left: 20px;
+  text-align: center;
+  margin: 0px;
+  padding: 75px 0px 0px 0px;
+  line-height: 0px;
+  font-family: 'ZCOOL XiaoWei', serif;
+  font-size: 30px;
+  
+}
+
+
 
 
 p {

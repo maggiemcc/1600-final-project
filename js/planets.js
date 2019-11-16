@@ -53,6 +53,7 @@ function populateDOM(single_planets) {
     planetsBack.appendChild(name)
     name.textContent = `${single_planets.name}`
     pic.src = `../planets/${planetsNum}.jpg`
+    // pic.src = `https://starwars-visualguide.com/assets/img/planets/${planetsNum}.jpg`
     planetsFront.appendChild(pic)
   
 

@@ -74,11 +74,9 @@ function populateDOM(single_planets) {
   }
 
   function fillCardBack(planetsBack, data) {
-    // let pokeOrder = document.createElement('h5')
-    let planetsHP = document.createElement('h5')
-    planetsHP.textContent = `${data.name}`
-    // pokeHP.textContent = data.stats[0].base_stat
-    planetsBack.appendChild(planetsHP)
+    let planetsDiameter = document.createElement('h5')
+    planetsDiameter.textContent = data.diameter
+    planetsBack.appendChild(planetsDiameter)
   }
     
 

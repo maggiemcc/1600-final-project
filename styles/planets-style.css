@@ -143,11 +143,25 @@ h4 {
   text-align: center;
   margin: 0px;
   padding: 100px 0px 0px 0px;
-  line-height: 15px;
+  line-height: 30px;
   font-family: 'ZCOOL XiaoWei', serif;
-  font-size: 20px;
+  font-size: 30px;
   
 }
+
+h3 {
+  /* position: absolute;
+  bottom: 10px;
+  left: 20px; */
+  text-align: center;
+  margin: 0px;
+  padding: 0px 0px 0px 20px;
+  line-height: 30px;
+  font-family: 'ZCOOL XiaoWei', serif;
+  font-size: 12px;
+  
+}
+
 
 p {
  position: absolute;
@@ -161,10 +175,10 @@ p {
 
 h5 {
   position: absolute;
-  bottom: 10px;
+  bottom: 15px;
   padding: 60px 15px 15px 15px;
   margin: 0px;
-  font-size: 15px;
+  font-size: 22px;
   line-height: 0px;
   font-family: 'Pacifico', cursive;
  }

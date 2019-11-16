@@ -38,7 +38,6 @@ function populateDOM(single_planets) {
     let planetsBack = document.createElement('div')
     let name = document.createElement('h4')
     let pic = document.createElement('img')
-    let terrain = document.createElement('h5')
 
     fillCardFront(planetsFront, single_planets)
     fillCardBack(planetsBack, single_planets)
@@ -82,7 +81,7 @@ function populateDOM(single_planets) {
     planetsDiameter.textContent = data.diameter
     planetsBack.appendChild(planetsDiameter)
 
-    let planetsTerrain = document.createElement('h4')
+    let planetsTerrain = document.createElement('h3')
     planetsTerrain.textContent = data.terrain
     planetsBack.appendChild(planetsTerrain)
   }

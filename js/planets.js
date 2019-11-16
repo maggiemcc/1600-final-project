@@ -104,5 +104,8 @@ class planets {
   }
 }
 
-const Maggies = new planets(900, 'Maggies Planet', 28, 12742);
+const Maggies = new planets(900, 'Maggies Planet', 24, 12742);
 populateDOM(Maggies)
+
+const Krypton = new planets(900, 'Krypton', 27, 1095);
+populateDOM(Krypton)

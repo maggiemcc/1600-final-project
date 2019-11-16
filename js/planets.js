@@ -52,7 +52,7 @@ function populateDOM(single_planets) {
     let planetsNum = getplanetsNumber(single_planets)
     planetsBack.appendChild(name)
     name.textContent = `${single_planets.name}`
-    pic.src = `../Planets/${planetsNum}.jpg`
+    pic.src = `../planets/${planetsNum}.jpg`
     planetsFront.appendChild(pic)
   
 

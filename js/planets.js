@@ -82,7 +82,9 @@ function populateDOM(single_planets) {
   }
     
 
-  
+
+
+
 
   function getplanetsNumber(id) {
        if(id < 10) return `00${id}`

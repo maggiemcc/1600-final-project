@@ -50,12 +50,12 @@ main {
 
 .front-face {
     width: 100%;
-    height: 100%;
-    margin: 0 0 0 0;
-    padding: 5px;
+    height: 85%;
+    margin: 10px 0 0 0;
+    padding: 0px;
     position: absolute;
     border-style: inset;
-    border-radius: 10px;
+    border-radius: 5px;
     backface-visibility: hidden;
     
 }

@@ -48,7 +48,19 @@ main {
     transition: transform .5s;
 }
 
-.front-face, .back-face {
+.front-face {
+    width: 100%;
+    height: 100%;
+    margin: 0 0 0 0;
+    padding: 5px;
+    position: absolute;
+    border-style: inset;
+    border-radius: 10px;
+    backface-visibility: hidden;
+    
+}
+
+.back-face {
     width: 100%;
     height: 100%;
     padding: 0px;
@@ -57,6 +69,7 @@ main {
     border-radius: 5px;
     backface-visibility: hidden;
 }
+
 
 .memory-card:active {
     transform: scale(.97);

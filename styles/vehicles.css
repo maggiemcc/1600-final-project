@@ -57,6 +57,8 @@ main {
     border-style: inset;
     border-radius: 5px;
     backface-visibility: hidden;
+    transform: rotateY(180deg);
+    border: 5px solid red;
     
 }
 
@@ -68,6 +70,7 @@ main {
     border-style: inset;
     border-radius: 5px;
     backface-visibility: hidden;
+    border: 5px solid blue;
 }
 
 
@@ -78,15 +81,6 @@ main {
 
 .memory-card.flip {
     transform: rotateY(180deg);
-}
-
-.front-face {
-    transform: rotateY(180deg);
-    border: 5px solid red;
-}
-
-.back-face {
-    border: 5px solid blue;
 }
 
 

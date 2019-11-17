@@ -50,8 +50,8 @@ main {
 
 .front-face {
     width: 100%;
-    height: 85%;
-    margin: 10px 0 0 0;
+    height: 70%;
+    margin: 25px 0 0 0;
     padding: 0px;
     position: absolute;
     border-style: inset;

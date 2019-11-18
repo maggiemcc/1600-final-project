@@ -98,18 +98,18 @@ async function getAPIData(url) {
   
   
   // data.stats[0].base_stat
-//   class planets {
-//     constructor(id, name, rotation_period, diameter, population) {
-//       this.id = id
-//       this.name = name
-//       this.rotation_period = rotation_period
-//       this.diameter = diameter
-//       this.population = population
-//     }
-//   }
+  class vehicles {
+    constructor(id, name, vehicle_class, cost_in_credits, max_atmosphering_speed) {
+      this.id = id
+      this.name = name
+      this.vehicle_class = vehicle_class
+      this.cost_in_credits = cost_in_credits
+      this.max_atmosphering_speed = max_atmosphering_speed
+    }
+  }
   
-//   const Maggies = new planets(900, 'Maggies Planet (Earth)', 24, 12742, '7.7 billion');
-//   populateDOM(Maggies)
+  const TIE_IN_interceptor = new vehicles(900, 'TIE/IN interceptor', 'Starfighter', 'unknown', '1,250km/h');
+  populateDOM(TIE_IN_interceptor)
   
-//   const Krypton = new planets(900, 'Krypton', 27, 1095, 'was 1.4 billion');
-//   populateDOM(Krypton)
+  const Geonosian_starfighter = new vehicles(900, 'Geonosian starfighter', 'Starfighter', 'unknown', '20,000km/h');
+  populateDOM(Geonosian_starfighter)

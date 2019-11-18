@@ -99,17 +99,60 @@ async function getAPIData(url) {
   
   // data.stats[0].base_stat
   class vehicles {
-    constructor(id, name, vehicle_class, cost_in_credits, max_atmosphering_speed) {
-      this.id = id
+    constructor(name, vehicle_class, cost_in_credits, max_atmosphering_speed) {
+
       this.name = name
       this.vehicle_class = vehicle_class
       this.cost_in_credits = cost_in_credits
       this.max_atmosphering_speed = max_atmosphering_speed
     }
   }
+
+
+  const Delta = new vehicles('Delta', 'Airplane', 'unknown', '460 – 575 mph');
+  populateDOM(Delta)
+
+  const Zephyr_G_swoop_bike = new vehicles('Zephyr-G swoop bike', 'Repulsorcraft', '5,750', '350km/h');
+  populateDOM(Zephyr_G_swoop_bike)
+
+  const Koro_2_Exodrive_airspeeder = new vehicles('Koro-2 Exodrive airspeeder', 'Airspeeder', 'unknown', '800km/h');
+  populateDOM(Koro_2_Exodrive_airspeeder)
   
-  const TIE_IN_interceptor = new vehicles(900, 'TIE/IN interceptor', 'Starfighter', 'unknown', '1,250km/h');
+  const XJ_6_airspeeder = new vehicles('XJ-6 airspeeder', 'Airspeeder', 'unknown', '720km/h');
+  populateDOM(XJ_6_airspeeder)
+
+   const LAAT_i= new vehicles('LAAT/i', 'Gunship', 'unknown', '620km/h');
+  populateDOM(LAAT_i)
+  
+  const Tsmeu_6_personal_wheel_bike = new vehicles('Tsmeu-6 personal wheel bike', 'Wheeled Walker', '15,000', '330km/h');
+  populateDOM(Tsmeu_6_personal_wheel_bike)
+
+  const TIE_IN_interceptor = new vehicles('TIE/IN interceptor', 'Starfighter', 'unknown', '1,250km/h');
   populateDOM(TIE_IN_interceptor)
   
-  const Geonosian_starfighter = new vehicles(900, 'Geonosian starfighter', 'Starfighter', 'unknown', '20,000km/h');
+  const Geonosian_starfighter = new vehicles('Geonosian starfighter', 'Starfighter', 'unknown', '20,000km/h');
   populateDOM(Geonosian_starfighter)
+
+  const Bantha_II_cargo_skiff = new vehicles('Bantha-II cargo skiff', 'Repulsorcraft Cargo Skiff', '8,000', '250km/h');
+  populateDOM(Bantha_II_cargo_skiff)
+  
+  const Imperial_Speeder_Bike = new vehicles('Imperial Speeder Bike', 'Speeder', ' 8,000', '360km/h');
+  populateDOM(Imperial_Speeder_Bike)
+
+  const Vulture_Droid= new vehicles('Vulture Droid', 'Starfighter', 'unknown', '1,200km/h');
+  populateDOM(Vulture_Droid)
+  
+  const Multi_Troop_Transport = new vehicles('Multi-Troop Transport', 'Repulsorcraft', '138,000', '35km/h');
+  populateDOM(Multi_Troop_Transport)
+
+  const Armored_Assault_Tank= new vehicles('Armored Assault Tank', 'Repulsorcraft', 'unknown', '55km/h');
+  populateDOM(Armored_Assault_Tank)
+  
+  const C_9979_landing_craft = new vehicles('C-9979 landing craft', 'Landing Craft', '200,000', '587km/h');
+  populateDOM(C_9979_landing_craft)
+
+   const Sith_speeder = new vehicles('Sith speeder', 'Speeder', '4,000', '180km/h');
+  populateDOM(Sith_speeder)
+  
+  const Single_Trooper_Aerial_Platform = new vehicles('Single Trooper Aerial Platform', 'Repulsorcraft', '2,500', '400km/h');
+  populateDOM(Single_Trooper_Aerial_Platform)

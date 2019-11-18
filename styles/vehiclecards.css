@@ -69,7 +69,7 @@ h4 {
 p {
  position: absolute;
  bottom: 15px;
- padding: 15px 15px 15px 15px;
+ padding: 0px 0px 0px 15px;
  margin: 0px;
  font-size: 20px;
  line-height: 0px;
@@ -79,7 +79,7 @@ p {
 h5 {
   position: absolute;
   bottom: 15px;
-  padding: 20px 0px 0px 0px;
+  padding: 15px 15px 15px 15px;
   margin: 0px;
   font-size: 20px;
   line-height: 20px;

@@ -42,16 +42,6 @@ h4 {
   
 }
 
-p {
- position: absolute;
- bottom: 15px;
- padding: 15px 15px 15px 15px;
- margin: 0px;
- font-size: 18px;
- line-height: 0px;
- font-family: 'Pacifico', cursive;
-}
-
 h5 {
   position: absolute;
   bottom: 15px;
@@ -61,6 +51,16 @@ h5 {
   line-height: 0px;
   font-family: 'Pacifico', cursive;
  }
+
+p {
+ position: absolute;
+ bottom: 15px;
+ padding: 15px 15px 15px 15px;
+ margin: 0px;
+ font-size: 18px;
+ line-height: 0px;
+ font-family: 'Pacifico', cursive;
+}
 
 img {
       width: 160px;

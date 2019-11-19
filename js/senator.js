@@ -50,7 +50,7 @@ async function getAPIData(url) {
         let cardImage = document.createElement('div')
         cardImage.setAttribute('class', 'card-image')
         let cardFigure = document.createElement('figure')
-       // cardFigure.setAttribute('class', 'image is-4by3')
+       cardFigure.setAttribute('class', 'image is-4by3')
         let figureImage = document.createElement('img')
         figureImage.src = `https://www.congress.gov/img/member/${senator.id.toLowerCase()}_200.jpg`
         figureImage.alt = 'Placeholder image'

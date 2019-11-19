@@ -5,6 +5,13 @@
 } */
 
 
+
+
+document.querySelector('#pokeButton').addEventListener('click', () => {
+  populateDOM(Davemon)
+})
+
+
 async function getAPIData(url) {
   try {
       const response = await fetch(url)
@@ -14,6 +21,7 @@ async function getAPIData(url) {
     console.error(error)
 }
 }
+
 
 // now, use the return async data
 const theData = getAPIData('https://pokeapi.co/api/v2/pokemon/')

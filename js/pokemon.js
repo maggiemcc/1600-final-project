@@ -6,9 +6,20 @@
 
 
 
-
 document.querySelector('#pokeButton').addEventListener('click', () => {
-  populateDOM(Davemon)
+  let pokeID = prompt("povide the Pokemon ID you want to add:")
+  let pokeIDNum = parseInt(pokeID, 10)
+  if(pokeIDNum > 810)  {
+  alert('That Pokemon ID does not exist! Please enter a different one.')
+  return
+} else { 
+  getAPIdata(`https://pokeapi.co/api/v2/pokemon/${pokeID}`)
+  .then(result => {
+  // let newPokemon = new Pokemon(pokeID)
+  populateDOM(result)
+ })
+ .catch(error => console.long(error))
+}
 })
 
 
@@ -61,6 +72,7 @@ function populateDOM(single_pokemon) {
     // name.textContent = `${single_pokemon.name} height: ${single_pokemon.height}`
     name.textContent = `height: ${single_pokemon.height}`
     pic.src = `../images/${pokeNum}.png`
+    // pic.src = 'https://raw.githubusercontent.com/fanzeyi/pokemon.json/master/images/${pokeNum}.png'
     pokeFront.appendChild(pic)
   
 

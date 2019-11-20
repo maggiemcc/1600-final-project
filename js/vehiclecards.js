@@ -82,7 +82,8 @@ async function getAPIData(url) {
       let vehiclesName = getvehiclesName(single_vehicles.name)
       vehiclesBack.appendChild(name)
       name.textContent = `${single_vehicles.name}`
-      pic.src = `https://starwars-visualguide.com/assets/img/vehicles/${vehiclesName}.jpg`
+      // pic.src = `https://starwars-visualguide.com/assets/img/vehicles/${vehiclesName}.jpg`
+      pic.src = `https://starwars-visualguide.com/assets/img/vehicles/4.jpg`
       vehiclesFront.appendChild(pic)
     
   

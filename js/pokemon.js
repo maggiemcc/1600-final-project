@@ -4,22 +4,28 @@
   return await response.json()
 } */
 
+// data.stats[0].base_stat
+class Pokemon {
+  constructor(id, name, stats) {
+    this.id = id
+    this.name = name
+    this.base_stat = stats
+  }
+}
 
 
 document.querySelector('#pokeButton').addEventListener('click', () => {
-  let pokeID = prompt("povide the Pokemon ID you want to add:")
-  let pokeIDNum = parseInt(pokeID, 10)
-  if(pokeIDNum > 810)  {
-  alert('That Pokemon ID does not exist! Please enter a different one.')
-  return
-} else { 
-  getAPIdata(`https://pokeapi.co/api/v2/pokemon/${pokeID}`)
-  .then(result => {
-  // let newPokemon = new Pokemon(pokeID)
-  populateDOM(result)
- })
- .catch(error => console.long(error))
-}
+  let pokeId = prompt('Provide the Pokemon ID you want to add:')
+  let pokeIdNum = parseInt(pokeId, 10)
+  if (pokeIdNum > 807) {
+    alert('That Pokemon ID does not exist! Please enter a different one.')
+    return
+  } else {
+    getAPIData(`https://pokeapi.co/api/v2/pokemon/${pokeId}`)
+    .then(result => {
+      populateDOM(result)
+    })
+  }
 })
 
 
@@ -71,8 +77,8 @@ function populateDOM(single_pokemon) {
     pokeBack.appendChild(name)
     // name.textContent = `${single_pokemon.name} height: ${single_pokemon.height}`
     name.textContent = `height: ${single_pokemon.height}`
-    pic.src = `../images/${pokeNum}.png`
-    // pic.src = 'https://raw.githubusercontent.com/fanzeyi/pokemon.json/master/images/${pokeNum}.png'
+    // pic.src = `../images/${pokeNum}.png`
+    pic.src = `https://raw.githubusercontent.com/fanzeyi/pokemon.json/master/images/${pokeNum}.png`
     pokeFront.appendChild(pic)
   
 
@@ -111,15 +117,7 @@ function populateDOM(single_pokemon) {
   }
 
 
-// data.stats[0].base_stat
-class Pokemon {
-  constructor(id, name, order, stats) {
-    this.id = id
-    this.name = name
-    this.order = order
-    this.base_stats = stats
-  }
-}
 
-const Davemon = new Pokemon(900, 'Davemon', 28, 130);
-populateDOM(Davemon)
+
+// const Davemon = new Pokemon(900, 'Davemon', 28, 130);
+// populateDOM(Davemon)

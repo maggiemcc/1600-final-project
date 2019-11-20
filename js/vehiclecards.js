@@ -4,6 +4,34 @@
   return await response.json()
 } */
 
+class vehicles {
+  constructor(name, vehicle_class, cost_in_credits, max_atmosphering_speed) {
+
+    this.name = name
+    this.vehicle_class = vehicle_class
+    this.cost_in_credits = cost_in_credits
+    this.max_atmosphering_speed = max_atmosphering_speed
+
+  }}
+
+
+document.querySelector('#vehicleButton').addEventListener('click', () => {
+  let pokeId = prompt('Provide the Pokemon ID you want to add:')
+  let pokeIdNum = parseInt(pokeId, 10)
+  if (pokeIdNum > 807) {
+    alert('That Pokemon ID does not exist! Please enter a different one.')
+    return
+  } else {
+    getAPIData(`https://pokeapi.co/api/v2/pokemon/${pokeId}`)
+    .then(result => {
+      populateDOM(result)
+    })
+  }
+})
+
+
+
+
 
 async function getAPIData(url) {
     try {

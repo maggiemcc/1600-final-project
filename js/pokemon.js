@@ -123,16 +123,15 @@ function populateDOM(single_pokemon) {
 
 
 // data.stats[0].base_stat
-class Pokemon {
-  constructor(id, order, name, height, weight) {
-    this.id = id
-    this.order = order
-    this.base_stat = stats
-    this.name = name
-    this.height = height
-    this.weight = weight
-  }
-}
+// class Pokemon {
+//   constructor(id, order, name, height, weight) {
+//     this.id = id
+//     this.order = order
+//     this.name = name
+//     this.height = height
+//     this.weight = weight
+//   }
+// }
 
 var card = document.querySelector('.card');
 card.addEventListener( 'click', function() {
@@ -140,7 +139,6 @@ card.addEventListener( 'click', function() {
 });
 
 
-
-// const Davemon = new Pokemon(810, 810, 50, 'Davemon', 20, 3.5, 1.65);
+// const Davemon = new Pokemon(810, 810, 'Davemon', 20, 3.5, 1.65);
 // populateDOM(Davemon)
 // document.body.appendChild(myImage)

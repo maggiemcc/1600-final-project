@@ -121,11 +121,13 @@ function populateDOM(single_pokemon) {
 
 // data.stats[0].base_stat
 class Pokemon {
-  constructor(id, name, stats, height) {
+  constructor(id, order, name, stats, height, weight) {
     this.id = id
+    this.order = order
     this.name = name
     this.base_stat = stats
     this.height = height
+    this.weight = weight
   }
 }
 
@@ -133,5 +135,5 @@ class Pokemon {
 
 var myImage = new Image(100,200);
 myImage.src = '../Images/900.png';
-const Davemon = new Pokemon(900, 'Davemon', 28, 130);
+const Davemon = new Pokemon(900, 900, 'Davemon', 130, 28,50);
 populateDOM(Davemon)

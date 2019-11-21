@@ -16,9 +16,9 @@ class vehicles {
 
 
 document.querySelector('#vehicleButton').addEventListener('click', () => {
-  let vehiclesName = prompt('Provide the Vehicle number you want to add:')
+  let vehiclesName = prompt('Provide a number between 4 and 76 to add a new vehicle: *Note some numbers may not work. If not try another number.')
   let vehiclesNameNum = parseInt(vehiclesName, 10)
-  if (vehiclesNameNum > 57) {
+  if (vehiclesNameNum > 76) {
     alert('That Vehicle does not exist! Please enter a different one.')
     return
   } else {
@@ -83,7 +83,7 @@ async function getAPIData(url) {
       vehiclesBack.appendChild(name)
       name.textContent = `${single_vehicles.name}`
       // pic.src = `https://starwars-visualguide.com/assets/img/vehicles/${vehiclesName}.jpg`
-      pic.src = `https://starwars-visualguide.com/assets/img/vehicles/4.jpg`
+     pic.src = `../vehicles/${vehiclesName}.jpg`
       vehiclesFront.appendChild(pic)
     
   

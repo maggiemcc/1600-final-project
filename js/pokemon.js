@@ -65,6 +65,12 @@ function populateDOM(single_pokemon) {
     let name = document.createElement('h4')
     let pic = document.createElement('img')
 
+    // let daveScene = document.createElement('div')
+    // let daveCard = document.createElement('div')
+    // let daveFront =  document.createElement('div')
+    // let daveBack = document.createElement('div')
+
+
     fillCardFront(pokeFront, single_pokemon)
     fillCardBack(pokeBack, single_pokemon)
 

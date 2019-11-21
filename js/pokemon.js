@@ -140,6 +140,6 @@ card.addEventListener( 'click', function() {
 
 
 
-// const Davemon = new Pokemon(810, 810, 'Davemon', 20, 28, 50);
+// const Davemon = new Pokemon(810, 810, 'Davemon', 20, 3.5, 1.65);
 // populateDOM(Davemon)
 // document.body.appendChild(myImage)

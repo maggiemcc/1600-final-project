@@ -95,19 +95,21 @@ function populateDOM(single_pokemon) {
   }
 
 
-  function fillCardFront(pokeFront, data) {
+  function fillCardBack(pokeBack, data) {
     let pokeHP = document.createElement('h5')
     pokeHP.textContent = `${data.id} ${data.name[0].toUpperCase()} ${data.name.slice(1)}`
-    // pokeHP.textContent = data.stats[0].base_stat
-    pokeFront.appendChild(pokeHP)
+    pokeHP.textContent = data.stats[0].base_stat
+    pokeBack.appendChild(pokeHP)
   }
 
-  function fillCardBack(pokeBack, data) {
+  function fillCardFront(pokeFront, data) {
     // let pokeOrder = document.createElement('h5')
-    let pokeOrder = document.createElement('p')
-    pokeOrder.textContent = data.order
-    pokeBack.appendChild(pokeOrder)
-   
+    // let pokeOrder = document.createElement('p')
+    // pokeOrder.textContent = data.order
+    // pokeBack.appendChild(pokeOrder)
+    let pokeHP = document.createElement('h5')
+    pokeHP.textContent = `${data.id} ${data.name[0].toUpperCase()} ${data.name.slice(1)}`
+    pokeFront.appendChild(pokeHP)
   }
     
 

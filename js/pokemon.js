@@ -95,21 +95,22 @@ function populateDOM(single_pokemon) {
   }
 
 
-  function fillCardBack(pokeBack, data) {
+  function fillCardFront(pokeFront, data) {
     let pokeHP = document.createElement('h5')
     pokeHP.textContent = `${data.id} ${data.name[0].toUpperCase()} ${data.name.slice(1)}`
-    pokeHP.textContent = data.stats[0].base_stat
-    pokeBack.appendChild(pokeHP)
+    // pokeHP.textContent = data.stats[0].base_stat
+    pokeFront.appendChild(pokeHP)
   }
 
-  function fillCardFront(pokeFront, data) {
+  function fillCardBack(pokeBack, data) {
     // let pokeOrder = document.createElement('h5')
     // let pokeOrder = document.createElement('p')
     // pokeOrder.textContent = data.order
     // pokeBack.appendChild(pokeOrder)
     let pokeHP = document.createElement('h5')
     pokeHP.textContent = `${data.id} ${data.name[0].toUpperCase()} ${data.name.slice(1)}`
-    pokeFront.appendChild(pokeHP)
+    pokeBack.appendChild(pokeHP)
+   
   }
     
 
@@ -123,19 +124,23 @@ function populateDOM(single_pokemon) {
 
 // data.stats[0].base_stat
 class Pokemon {
-  constructor(id, order, name, stats, height, weight) {
+  constructor(id, order, name, height, weight) {
     this.id = id
     this.order = order
     this.name = name
-    this.base_stat = stats
     this.height = height
     this.weight = weight
   }
 }
 
+var card = document.querySelector('.card');
+card.addEventListener( 'click', function() {
+  card.classList.toggle('is-flipped');
+});
 
 
-var myImage = new Image(100,200);
-myImage.src = '../Images/900.png';
-const Davemon = new Pokemon(900, 900, 'Davemon', 130, 28,50);
-populateDOM(Davemon)
+// var myImage = new Image(100,200);
+// myImage.src = '../Images/900.png';
+// const Davemon = new Pokemon(810, 810, 'Davemon', 130, 28, 50);
+// populateDOM(Davemon)
+// document.body.appendChild(myImage)

@@ -4,16 +4,6 @@
   return await response.json()
 } */
 
-// data.stats[0].base_stat
-class Pokemon {
-  constructor(id, name, stats) {
-    this.id = id
-    this.name = name
-    this.base_stat = stats
-  }
-}
-
-
 document.querySelector('#pokeButton').addEventListener('click', () => {
   let pokeId = prompt('Provide the Pokemon ID you want to add:')
   let pokeIdNum = parseInt(pokeId, 10)
@@ -41,7 +31,7 @@ async function getAPIData(url) {
 
 
 // now, use the return async data
-const theData = getAPIData('https://pokeapi.co/api/v2/pokemon/')
+const theData = getAPIData('https://pokeapi.co/api/v2/pokemon/?limit=25')
 .then(data => { 
       for (const pokemon of data.results) {
       getAPIData(pokemon.url)
@@ -117,7 +107,19 @@ function populateDOM(single_pokemon) {
   }
 
 
+// data.stats[0].base_stat
+class Pokemon {
+  constructor(id, name, stats, height) {
+    this.id = id
+    this.name = name
+    this.base_stat = stats
+    this.height = height
+  }
+}
 
+const Davemon = new Pokemon(900, 'Davemon', 28, 130);
+populateDOM(Davemon)
 
-// const Davemon = new Pokemon(900, 'Davemon', 28, 130);
-// populateDOM(Davemon)
+var myImage = new Image(100,200);
+myImage.src = '../Images/900.png';
+document.body.appendChild(myImage);

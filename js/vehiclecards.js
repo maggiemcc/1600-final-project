@@ -44,7 +44,7 @@ async function getAPIData(url) {
   }
   
   // now, use the return async data
-  const theData = getAPIData('https://swapi.co/api/vehicles/')
+  const theData = getAPIData('https://swapi.co/api/vehicles/?page=')
   .then(data => { 
         for (const vehicles of data.results) {
         getAPIData(vehicles.url)

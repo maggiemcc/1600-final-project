@@ -4,6 +4,17 @@
   return await response.json()
 } */
 
+// document.querySelector('#getHP').addEventListener('click', () => {
+//   getAPIData('https://pokeapi.co/api/v2/pokemon/750')
+//   .then(muddsy => {
+//     // console.log(muddsy.stats[5].stat.name)
+//     const HP = muddsy.stats.find(element => {
+//       return element.stat.name === "hp"
+//     })
+//     console.log(HP.stat.name)
+//   })
+// })
+
 document.querySelector('#pokeButton').addEventListener('click', () => {
   let pokeId = prompt('Provide the Pokemon ID you want to add:')
   let pokeIdNum = parseInt(pokeId, 10)
@@ -66,7 +77,7 @@ function populateDOM(single_pokemon) {
     let pokeNum = getPokeNumber(single_pokemon.id)
     pokeBack.appendChild(name)
     // name.textContent = `${single_pokemon.name} height: ${single_pokemon.height}`
-    name.textContent = `height: ${single_pokemon.height}`
+    name.textContent = `height: ${single_pokemon.height} weight: ${single_pokemon.weight}`
     // pic.src = `../images/${pokeNum}.png`
     pic.src = `https://raw.githubusercontent.com/fanzeyi/pokemon.json/master/images/${pokeNum}.png`
     pokeFront.appendChild(pic)
@@ -85,17 +96,18 @@ function populateDOM(single_pokemon) {
 
 
   function fillCardFront(pokeFront, data) {
-    let pokeOrder = document.createElement('p')
-    pokeOrder.textContent = data.order
-    pokeFront.appendChild(pokeOrder)
+    let pokeHP = document.createElement('h5')
+    pokeHP.textContent = `${data.id} ${data.name[0].toUpperCase()} ${data.name.slice(1)}`
+    // pokeHP.textContent = data.stats[0].base_stat
+    pokeFront.appendChild(pokeHP)
   }
 
   function fillCardBack(pokeBack, data) {
     // let pokeOrder = document.createElement('h5')
-    let pokeHP = document.createElement('h5')
-    pokeHP.textContent = `${data.id} ${data.name[0].toUpperCase()} ${data.name.slice(1)}`
-    // pokeHP.textContent = data.stats[0].base_stat
-    pokeBack.appendChild(pokeHP)
+    let pokeOrder = document.createElement('p')
+    pokeOrder.textContent = data.order
+    pokeBack.appendChild(pokeOrder)
+   
   }
     
 
@@ -117,9 +129,9 @@ class Pokemon {
   }
 }
 
-const Davemon = new Pokemon(900, 'Davemon', 28, 130);
-populateDOM(Davemon)
+
 
 var myImage = new Image(100,200);
 myImage.src = '../Images/900.png';
-document.body.appendChild(myImage);
+const Davemon = new Pokemon(900, 'Davemon', 28, 130);
+populateDOM(Davemon)

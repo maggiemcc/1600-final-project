@@ -31,8 +31,6 @@ document.querySelector('#vehicleButton').addEventListener('click', () => {
 
 
 
-
-
 async function getAPIData(url) {
     try {
         const response = await fetch(url)
@@ -44,7 +42,7 @@ async function getAPIData(url) {
   }
   
   // now, use the return async data
-  const theData = getAPIData('https://swapi.co/api/vehicles/?page=')
+  const theData = getAPIData('https://swapi.co/api/vehicles/')
   .then(data => { 
         for (const vehicles of data.results) {
         getAPIData(vehicles.url)

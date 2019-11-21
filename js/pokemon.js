@@ -96,20 +96,20 @@ function populateDOM(single_pokemon) {
 
 
   function fillCardFront(pokeFront, data) {
-    let pokeHP = document.createElement('h5')
-    pokeHP.textContent = `${data.id} ${data.name[0].toUpperCase()} ${data.name.slice(1)}`
-    // pokeHP.textContent = data.stats[0].base_stat
-    pokeFront.appendChild(pokeHP)
+     // let pokeOrder = document.createElement('h5')
+     let pokeOrder = document.createElement('p')
+     pokeOrder.textContent = data.order
+     pokeFront.appendChild(pokeOrder)
+     let pokeHP = document.createElement('h5')
+     pokeHP.textContent = `${data.id} ${data.name[0].toUpperCase()} ${data.name.slice(1)}`
+     pokeFront.appendChild(pokeHP)
   }
 
   function fillCardBack(pokeBack, data) {
-    // let pokeOrder = document.createElement('h5')
-    // let pokeOrder = document.createElement('p')
-    // pokeOrder.textContent = data.order
-    // pokeBack.appendChild(pokeOrder)
     let pokeHP = document.createElement('h5')
     pokeHP.textContent = `${data.id} ${data.name[0].toUpperCase()} ${data.name.slice(1)}`
-    pokeBack.appendChild(pokeHP)
+    pokeHP.textContent = data.stats[0].base_stat
+    pokeBack.appendChild(pokeHP) 
    
   }
     
@@ -127,6 +127,7 @@ class Pokemon {
   constructor(id, order, name, height, weight) {
     this.id = id
     this.order = order
+    this.base_stat = stats
     this.name = name
     this.height = height
     this.weight = weight
@@ -140,6 +141,6 @@ card.addEventListener( 'click', function() {
 
 
 
-// const Davemon = new Pokemon(810, 810, 'Davemon', 20, 3.5, 1.65);
+// const Davemon = new Pokemon(810, 810, 50, 'Davemon', 20, 3.5, 1.65);
 // populateDOM(Davemon)
 // document.body.appendChild(myImage)

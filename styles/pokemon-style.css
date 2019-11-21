@@ -110,12 +110,14 @@ img {
 .card__face--front {
    background: white;
    border: 5px solid red;
+   border-radius: .4rem;
 }
 
 .card__face--back {
   background: white;
   border: 5px solid blue;
   transform: rotateY(180deg);
+  border-radius: .4rem;
 }
 
 button {

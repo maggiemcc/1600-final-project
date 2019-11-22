@@ -29,7 +29,8 @@ h1 {
   text-align: center;
   text-decoration: underline;
   color: white;
-  -webkit-text-stroke: .6px black;
+  -webkit-text-stroke: .3px black;
+  font-weight: 900;
 }
 
 h4 {

@@ -65,11 +65,6 @@ function populateDOM(single_pokemon) {
     let name = document.createElement('h4')
     let pic = document.createElement('img')
 
-    // let daveScene = document.createElement('div')
-    // let daveCard = document.createElement('div')
-    // let daveFront =  document.createElement('div')
-    // let daveBack = document.createElement('div')
-
 
     fillCardFront(pokeFront, single_pokemon)
     fillCardBack(pokeBack, single_pokemon)
@@ -83,7 +78,7 @@ function populateDOM(single_pokemon) {
     let pokeNum = getPokeNumber(single_pokemon.id)
     pokeBack.appendChild(name)
     // name.textContent = `${single_pokemon.name} height: ${single_pokemon.height}`
-    name.textContent = `height: ${single_pokemon.height} weight: ${single_pokemon.weight}`
+    name.textContent = `height: ${single_pokemon.height} weight: ${single_pokemon.weight} experience: ${single_pokemon.base_experience}`
     // pic.src = `../images/${pokeNum}.png`
     pic.src = `https://raw.githubusercontent.com/fanzeyi/pokemon.json/master/images/${pokeNum}.png`
     pokeFront.appendChild(pic)
@@ -101,21 +96,21 @@ function populateDOM(single_pokemon) {
   }
 
 
-  function fillCardFront(pokeFront, data) {
-     // let pokeOrder = document.createElement('h5')
-     let pokeOrder = document.createElement('p')
-     pokeOrder.textContent = data.order
-     pokeFront.appendChild(pokeOrder)
-     let pokeHP = document.createElement('h5')
-     pokeHP.textContent = `${data.id} ${data.name[0].toUpperCase()} ${data.name.slice(1)}`
-     pokeFront.appendChild(pokeHP)
-  }
-
   function fillCardBack(pokeBack, data) {
     let pokeHP = document.createElement('h5')
     pokeHP.textContent = `${data.id} ${data.name[0].toUpperCase()} ${data.name.slice(1)}`
-    pokeHP.textContent = data.stats[0].base_stat
-    pokeBack.appendChild(pokeHP) 
+    // pokeHP.textContent = data.stats[0].base_stat
+    pokeBack.appendChild(pokeHP)
+  }
+
+  function fillCardFront(pokeFront, data) {
+    // let pokeOrder = document.createElement('h5')
+    // let pokeOrder = document.createElement('p')
+    // pokeOrder.textContent = data.order
+    // pokeBack.appendChild(pokeOrder)
+    let pokeHP = document.createElement('h5')
+    pokeHP.textContent = `${data.id} ${data.name[0].toUpperCase()} ${data.name.slice(1)}`
+    pokeFront.appendChild(pokeHP)
    
   }
     
@@ -129,15 +124,17 @@ function populateDOM(single_pokemon) {
 
 
 // data.stats[0].base_stat
-// class Pokemon {
-//   constructor(id, order, name, height, weight) {
-//     this.id = id
-//     this.order = order
-//     this.name = name
-//     this.height = height
-//     this.weight = weight
-//   }
-// }
+class Pokemon {
+  constructor(id, order, base_experience, name, height, weight) {
+    this.id = id
+    this.order = order
+    this.name = name
+    this.height = height
+    this.weight = weight
+    this.base_experience = base_experience
+  }
+}
+
 
 var card = document.querySelector('.card');
 card.addEventListener( 'click', function() {
@@ -145,6 +142,6 @@ card.addEventListener( 'click', function() {
 });
 
 
-// const Davemon = new Pokemon(810, 810, 'Davemon', 20, 3.5, 1.65);
-// populateDOM(Davemon)
-// document.body.appendChild(myImage)
+
+const Davemon = new Pokemon(810, 810, 200, 'Davemon', 130, 28, 50);
+populateDOM(Davemon)

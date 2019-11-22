@@ -77,8 +77,8 @@ function populateDOM(single_pokemon) {
   
     let pokeNum = getPokeNumber(single_pokemon.id)
     pokeBack.appendChild(name)
-    // name.textContent = `${single_pokemon.name} height: ${single_pokemon.height}`
-    name.textContent = `height: ${single_pokemon.height} weight: ${single_pokemon.weight} experience: ${single_pokemon.base_experience}`
+    // name.textContent = `${single_pokemon.name}`
+    name.textContent = `Height: ${single_pokemon.height} Weight: ${single_pokemon.weight} Experience: ${single_pokemon.base_experience}`
     // pic.src = `../images/${pokeNum}.png`
     pic.src = `https://raw.githubusercontent.com/fanzeyi/pokemon.json/master/images/${pokeNum}.png`
     pokeFront.appendChild(pic)
@@ -97,21 +97,22 @@ function populateDOM(single_pokemon) {
 
 
   function fillCardBack(pokeBack, data) {
-    let pokeHP = document.createElement('h5')
-    pokeHP.textContent = `${data.id} ${data.name[0].toUpperCase()} ${data.name.slice(1)}`
-    // pokeHP.textContent = data.stats[0].base_stat
-    pokeBack.appendChild(pokeHP)
-  }
-
-  function fillCardFront(pokeFront, data) {
-    // let pokeOrder = document.createElement('h5')
     // let pokeOrder = document.createElement('p')
     // pokeOrder.textContent = data.order
     // pokeBack.appendChild(pokeOrder)
     let pokeHP = document.createElement('h5')
+    //  pokeHP.textContent = data.stats[0].base_stat
+    pokeHP.textContent = `${data.id} ${data.name[0].toUpperCase()} ${data.name.slice(1)}`
+    pokeBack.appendChild(pokeHP)
+  }
+
+  function fillCardFront(pokeFront, data) {
+    let pokeHP = document.createElement('h5')
     pokeHP.textContent = `${data.id} ${data.name[0].toUpperCase()} ${data.name.slice(1)}`
     pokeFront.appendChild(pokeHP)
-   
+    // let pokeOrder = document.createElement('p')
+    // pokeOrder.textContent = data.order
+     // pokeFront.appendChild(pokeOrder)
   }
     
 
@@ -123,25 +124,22 @@ function populateDOM(single_pokemon) {
   }
 
 
-// data.stats[0].base_stat
 class Pokemon {
   constructor(id, order, base_experience, name, height, weight) {
     this.id = id
     this.order = order
+    this.base_experience = base_experience
     this.name = name
     this.height = height
     this.weight = weight
-    this.base_experience = base_experience
   }
 }
+
+const Davemon = new Pokemon(810, 810, 200, 'Davemon', 3.5, 1.65);
+populateDOM(Davemon)
 
 
 var card = document.querySelector('.card');
 card.addEventListener( 'click', function() {
   card.classList.toggle('is-flipped');
 });
-
-
-
-const Davemon = new Pokemon(810, 810, 200, 'Davemon', 130, 28, 50);
-populateDOM(Davemon)

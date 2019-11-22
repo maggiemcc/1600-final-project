@@ -1,6 +1,7 @@
 body {
   /* background: linear-gradient(0.25turn, #fffefe, #686868b2); */
-  background: blue;
+  background-image: url(https://cdn.pixabay.com/photo/2015/10/31/00/43/background-texture-1014963_1280.jpg);
+  background-size: contain;
   margin: 4%;
   font-family: sans-serif; 
 }
@@ -8,7 +9,7 @@ body {
 main {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  grid-gap: 3rem;
+  grid-gap: 3.2rem;
   width: 100%;
   max-width: 2000px;
   margin: 0 auto;

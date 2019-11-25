@@ -18,6 +18,7 @@ async function getAPIData(url) {
         populateDOM(allSenators)
         // console.log(simpleSenators)
         simpleSenators = mapSenators(allSenators)
+        console.log(getOldestSenator(simpleSenators))
         populateDOM(simpleSenators)
     })
     
@@ -27,6 +28,9 @@ async function getAPIData(url) {
     
     console.log(republicans, democrats)
 
+
+
+    //map
 
     function mapSenators(allOfThem) {
     const resultMap = allOfThem.map(senator => {
@@ -40,6 +44,13 @@ async function getAPIData(url) {
         }
     })
 return resultMap
+}
+
+
+function getOldestSenator(arrayOfSenators) {
+    return arrayOfSenators.reduce((oldest, senator) => {
+        return (oldest.age || 0) > senator.age ? oldest : senator
+    }, {})
 }
 
 
@@ -93,7 +104,7 @@ return resultMap
         titleP.textContent = `${senator.first_name} ${senator.last_name}`
         let subtitleP = document.createElement('p')
         subtitleP.setAttribute('class', 'subtitle is-6')
-        subtitleP.textContent = `${senator.date_of_birth} Age: ${_calculateAge(new Date(senator.date_of_birth))} years old`
+        subtitleP.textContent = `${senator.date_of_birth} Age: ${_calculateAge(new Date(senator.date_of_birth))}`
         
 
         let contentDiv = document.createElement('div')
@@ -134,9 +145,3 @@ return resultMap
 // const testReduce = testArray.reduce((acc, num) => {
 //     return acc + num
 // }, 0)
-
-// function getOldestSenator(arrayOfSenators) {
-//     return arrayOfSenators.reduce((acc, senator) => {
-//         return (oldest.age || 0)
-//     }, {})
-// }

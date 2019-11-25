@@ -10,11 +10,15 @@ async function getAPIData(url) {
     
   
     let allSenators = []
+    let simpleSenators = []
+
     const theData = getAPIData('senators.json').then(data => {
         allSenators = data.results[0].members
         console.log(allSenators)
         populateDOM(allSenators)
+        // console.log(simpleSenators)
         simpleSenators = mapSenators(allSenators)
+        console.log(mapSenators(allSenators))
     })
     
     
@@ -22,6 +26,22 @@ async function getAPIData(url) {
     const democrats = allSenators.filter(senator => senator.party === 'D')
     
     console.log(republicans, democrats)
+
+
+    function mapSenators(allOfThem) {
+    const resultMap = allOfThem.map(senator => {
+        return {
+            name: `${senator.first_name} ${senator.last_name}`,
+            party: senator.party,
+            birth_date: senator.date_of_birth,
+            age: _calculateAge(new Date(senator.date_of_birth)),
+            gender: senator.gender
+        }
+    })
+return resultMap
+}
+
+
 
     const container = document.querySelector('.container')
     
@@ -72,13 +92,13 @@ async function getAPIData(url) {
         titleP.textContent = `${senator.first_name} ${senator.last_name}`
         let subtitleP = document.createElement('p')
         subtitleP.setAttribute('class', 'subtitle is-6')
-        subtitleP.textContent = `${senator.date_of_birth} Age: )}`
+        subtitleP.textContent = `${senator.date_of_birth} Age: ${_calculateAge(new Date(senator.date_of_birth))} years old`
         
 
         let contentDiv = document.createElement('div')
         contentDiv.setAttribute('class', 'content')
-        contentDiv.textContent = 'Lorem ipsum dolor sit lis mauris.'
-        let contentBreak = document.createElement('br')
+        contentDiv.textContent = `Lorem ipsum dolor sit lis mauris.`
+        let contentBreak = document.createElement('hr')
         let timeSection = document.createElement('time')
         let newDate = new Date()
         timeSection.dateTime = `${newDate}`
@@ -91,47 +111,31 @@ async function getAPIData(url) {
         mediaLeft.appendChild(figure)
         media.appendChild(mediaLeft)
         media.appendChild(mediaContent)
-        // contentDiv.appendChild(contentBreak)
-        // contentDiv.appendChild(timeSection)
+        contentDiv.appendChild(contentBreak)
+        contentDiv.appendChild(timeSection)
         cardContent.appendChild(media)
-        // cardContent.appendChild(ContentDiv)
+        cardContent.appendChild(contentDiv)
         return cardContent
     }
 
-    // function_calculateAge(birthday)
-    // console.log(_calculateAge(new Date(`1940-07-03`)))
+    function _calculateAge(birthday) { // birthday is a date
+        var ageDifMs = Date.now() - birthday.getTime();
+        var ageDate = new Date(ageDifMs); // miliseconds from epoch
+        return Math.abs(ageDate.getUTCFullYear() - 1970);
+    }
 
+    console.log(_calculateAge(new Date('1940-07-03')))
 
 
 //reduce example
-    const testArray = [5,10,15,20,25,30,35,40,45,50]
+//     const testArray = [5,10,15,20,25,30,35,40,45,50]
 
-const testReduce = testArray.reduce((acc, num) => {
-    return acc + num
-}, 0)
+// const testReduce = testArray.reduce((acc, num) => {
+//     return acc + num
+// }, 0)
 
-function getOldestSenator(arrayOfSenators) {
-    return arrayOfSenators.reduce((acc, senator) => {
-        return (oldest.age || 0)
-    }, {})
-}
-
-
-
-
-    //map example
-    
-//     function mapSenators(allOfThem) {
-//    const resultmap = allOfThem.map(senator => {
-//         return {
-//             id: senator.id,
-//             name: `${senator.first_name} ${senator.last_name}`,
-//             party: senator.party,
-//             birth_date: senator.date_of_birth,
-//             age: _calculateAge(new Date(senatator.date_of_birth)),
-//         }
-//     })
-//     return resultMap
-//     }
-
-    
+// function getOldestSenator(arrayOfSenators) {
+//     return arrayOfSenators.reduce((acc, senator) => {
+//         return (oldest.age || 0)
+//     }, {})
+// }

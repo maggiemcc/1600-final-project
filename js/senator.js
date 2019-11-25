@@ -104,12 +104,12 @@ function getOldestSenator(arrayOfSenators) {
         titleP.textContent = `${senator.first_name} ${senator.last_name}`
         let subtitleP = document.createElement('p')
         subtitleP.setAttribute('class', 'subtitle is-6')
-        subtitleP.textContent = `${senator.date_of_birth} Age: ${_calculateAge(new Date(senator.date_of_birth))}`
+        subtitleP.textContent = `${senator.date_of_birth} Age: ${_calculateAge(new Date(senator.date_of_birth))} `
         
 
         let contentDiv = document.createElement('div')
         contentDiv.setAttribute('class', 'content')
-        contentDiv.textContent = `Lorem ipsum dolor sit lis mauris.`
+        contentDiv.textContent = `Gender: ${senator.gender}, State: ${senator.state}, Next Election: ${senator.next_election} Office: ${senator.office}`
         let contentBreak = document.createElement('hr')
         let timeSection = document.createElement('time')
         let newDate = new Date()

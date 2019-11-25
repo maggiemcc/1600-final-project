@@ -109,7 +109,7 @@ function getOldestSenator(arrayOfSenators) {
 
         let contentDiv = document.createElement('div')
         contentDiv.setAttribute('class', 'content')
-        contentDiv.textContent = `Gender: ${senator.gender}, State: ${senator.state}, Next Election: ${senator.next_election} Office: ${senator.office}`
+        contentDiv.textContent = `GENDER: ${senator.gender}, STATE: ${senator.state}, NEXT ELECTION: ${senator.next_election} OFFICE: ${senator.office}`
         let contentBreak = document.createElement('hr')
         let timeSection = document.createElement('time')
         let newDate = new Date()

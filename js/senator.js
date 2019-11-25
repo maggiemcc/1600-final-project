@@ -18,7 +18,7 @@ async function getAPIData(url) {
         populateDOM(allSenators)
         // console.log(simpleSenators)
         simpleSenators = mapSenators(allSenators)
-        console.log(mapSenators(allSenators))
+        populateDOM(simpleSenators)
     })
     
     
@@ -31,7 +31,8 @@ async function getAPIData(url) {
     function mapSenators(allOfThem) {
     const resultMap = allOfThem.map(senator => {
         return {
-            name: `${senator.first_name} ${senator.last_name}`,
+            id: senator.id,
+            name: `${senator.name}`,
             party: senator.party,
             birth_date: senator.date_of_birth,
             age: _calculateAge(new Date(senator.date_of_birth)),

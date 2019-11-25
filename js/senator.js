@@ -19,7 +19,7 @@ async function getAPIData(url) {
         // console.log(simpleSenators)
         simpleSenators = mapSenators(allSenators)
         console.log(getOldestSenator(simpleSenators))
-        populateDOM(simpleSenators)
+        // populateDOM(simpleSenators)
     })
     
     

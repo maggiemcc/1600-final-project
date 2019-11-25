@@ -27,22 +27,6 @@ async function getAPIData(url) {
     
 
 
-    //map example
-    
-//     function mapSenators(allOfThem) {
-//    const resultmap = allOfThem.map(senator => {
-//         return {
-//             id: senator.id,
-//             name: `${senator.first_name} ${senator.last_name}`,
-//             party: senator.party,
-//             birth_date: senator.date_of_birth,
-//             age: _calculateAge(new Date(senatator.date_of_birth)),
-//         }
-//     })
-//     return resultMap
-//     }
-
-    
     function populateDOM(senatorArray) {
         senatorArray.forEach(senator => {
         let card = document.createElement('div')
@@ -50,7 +34,7 @@ async function getAPIData(url) {
         let cardImage = document.createElement('div')
         cardImage.setAttribute('class', 'card-image')
         let cardFigure = document.createElement('figure')
-       cardFigure.setAttribute('class', 'image is-4by3')
+    //    cardFigure.setAttribute('class', 'image is-4by3')
         let figureImage = document.createElement('img')
         figureImage.src = `https://www.congress.gov/img/member/${senator.id.toLowerCase()}_200.jpg`
         figureImage.alt = 'Placeholder image'
@@ -71,23 +55,24 @@ async function getAPIData(url) {
         media.setAttribute('class', 'media')
         let mediaLeft = document.createElement('div')
         mediaLeft.setAttribute('class', 'media-left')
+
         let figure = document.createElement('figure')
         figure.setAttribute('class', 'image is-96x96')
-
         let figureImage = document.createElement('img')
-        //if(senator.party === "D") {
-        //figureImage.src = "/Images/donkey.png"}
-        //if(senator.party === "R") {
-        //    figureImage.src = "/Images/Republican.png"}
+        if(senator.party === "D") {
+        figureImage.src = "/Images/donkey.png"}
+        if(senator.party === "R") {
+           figureImage.src = "/Images/Republican.png"}
         figureImage.alt="Placeholder thumbnail"
+        
         let mediaContent = document.createElement('div')
         mediaContent.setAttribute('class', 'media-content')
         let titleP = document.createElement('p')
         titleP.setAttribute('class', 'title is-4')
-        //titleP.textContent = `${senator.first_name} ${senator.last_name}`
+        titleP.textContent = `${senator.first_name} ${senator.last_name}`
         let subtitleP = document.createElement('p')
         subtitleP.setAttribute('class', 'subtitle is-6')
-        //subtitleP.textContent = `${senator.date_of_birth} Age: )}`
+        subtitleP.textContent = `${senator.date_of_birth} Age: )}`
         
 
         let contentDiv = document.createElement('div')
@@ -130,3 +115,23 @@ function getOldestSenator(arrayOfSenators) {
         return (oldest.age || 0)
     }, {})
 }
+
+
+
+
+    //map example
+    
+//     function mapSenators(allOfThem) {
+//    const resultmap = allOfThem.map(senator => {
+//         return {
+//             id: senator.id,
+//             name: `${senator.first_name} ${senator.last_name}`,
+//             party: senator.party,
+//             birth_date: senator.date_of_birth,
+//             age: _calculateAge(new Date(senatator.date_of_birth)),
+//         }
+//     })
+//     return resultMap
+//     }
+
+    

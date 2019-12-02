@@ -25,8 +25,9 @@ async function getAPIData(url) {
     
     const republicans = allSenators.filter(senator => senator.party === 'R')
     const democrats = allSenators.filter(senator => senator.party === 'D')
-    
-    console.log(republicans, democrats)
+    const independents = allSenators.filter(senator => senator.party === 'ID')
+
+    console.log(republicans, democrats, independents)
 
 
 
@@ -94,7 +95,9 @@ function getOldestSenator(arrayOfSenators) {
         if(senator.party === "D") {
         figureImage.src = "/Images/donkey.png"}
         if(senator.party === "R") {
-           figureImage.src = "/Images/Republican.png"}
+        figureImage.src = "/Images/Republican.png"}
+        if(senator.party === "ID") {
+        figureImage.src = "/Images/independent.png"}
         figureImage.alt="Placeholder thumbnail"
         
         let mediaContent = document.createElement('div')
@@ -109,7 +112,7 @@ function getOldestSenator(arrayOfSenators) {
 
         let contentDiv = document.createElement('div')
         contentDiv.setAttribute('class', 'content')
-        contentDiv.textContent = `GENDER: ${senator.gender}, STATE: ${senator.state}, NEXT ELECTION: ${senator.next_election}, OFFICE: ${senator.office}`
+        contentDiv.textContent = `PARTY: ${senator.party}, GENDER: ${senator.gender}, STATE: ${senator.state}, NEXT ELECTION: ${senator.next_election}, OFFICE: ${senator.office}`
         let contentBreak = document.createElement('hr')
         let timeSection = document.createElement('time')
         let newDate = new Date()

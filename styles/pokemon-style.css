@@ -99,6 +99,11 @@ img {
   position: relative;
 }
 
+.card:hover {
+  color: rgb(255, 217, 0);
+  -webkit-text-stroke: .3px black;
+}
+
 .card.is-flipped {
   transform: rotateX(180deg);
 }

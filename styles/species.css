@@ -76,13 +76,15 @@
   }
   
   body {
-      background: linear-gradient(#fffefe, #c9c9c9, #1100ff);
+      background: linear-gradient(#fffefe, #c9c9c9, #ff0000);
   }
   
   img {
-    width: 400px;
-  
+    width: 200px;
+    border: 2px solid white;
+    border-radius: 5px;
   }
+  
   color {
     color: blue;
     -webkit-text-stroke: 1px rgb(255, 255, 255); 

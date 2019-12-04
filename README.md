@@ -3,12 +3,24 @@
 [Personal Portfolio Page - Netlify](https://maggiespersonalportfoliowebpage.netlify.com/)
 
 
-Here are some skills I've learned and used:
+**Here are some skills I've learned and used:**
 
-* [Use of Import statements](https://github.com/maggiemcc/personal-portfolio-webpage/blob/master/js/starwars.js)
+* [Import statements](https://github.com/maggiemcc/personal-portfolio-webpage/blob/master/js/starwars.js)
+
+* [Export statements](https://github.com/maggiemcc/personal-portfolio-webpage/blob/master/Assets/people.js)
 
 * [Iteration through an Array using loops and Array methods](https://github.com/maggiemcc/personal-portfolio-webpage/blob/master/js/pokemon.js)
 
 * [Dot notation](https://github.com/maggiemcc/personal-portfolio-webpage/blob/master/js/planets.js)
 
-* [Use of Arrow functions](https://github.com/maggiemcc/personal-portfolio-webpage/blob/master/js/species.js)
+* [Arrow functions](https://github.com/maggiemcc/personal-portfolio-webpage/blob/master/js/species.js)
+
+* [Let and const variables](https://github.com/maggiemcc/personal-portfolio-webpage/blob/master/js/planets.js)
+
+* [Conditional logic and value comparison](https://github.com/maggiemcc/personal-portfolio-webpage/blob/master/js/species.js)
+
+* [Conditional logic and value comparison](https://github.com/maggiemcc/personal-portfolio-webpage/blob/master/js/senator.js)
+
+* [Constructors](https://github.com/maggiemcc/personal-portfolio-webpage/blob/master/js/pokemon.js)
+
+* [Custom JavaScript objects](https://github.com/maggiemcc/personal-portfolio-webpage/blob/master/js/planets.js)

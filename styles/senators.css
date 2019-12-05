@@ -8,6 +8,10 @@
     margin-bottom: 6rem;
   }
 
+  .card {
+    filter: drop-shadow(10px 10px 6px rgb(201, 201, 201));
+  }
+
   body {
     background-color: rgb(230, 230, 230);
   }

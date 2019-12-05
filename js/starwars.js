@@ -42,9 +42,9 @@ people.forEach(function(person) {
    
     name.textContent = person.name
     gender.textContent = `GENDER: ${person.gender}`
-    birth_year.textContent = `BIRTH YR: ${person.birth_year}`
-    height.textContent = `HEIGHT (cm): ${person.height}`
-    mass.textContent = `MASS (kg): ${person.mass}`
+    birth_year.textContent = `BORN: ${person.birth_year}`
+    height.textContent = `HEIGHT: ${person.height}cm`
+    mass.textContent = `MASS: ${person.mass}kg`
     pic.src = `https://starwars-visualguide.com/assets/img/characters/${charNum}.jpg`
 
     

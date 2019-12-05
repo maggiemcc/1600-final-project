@@ -5,12 +5,9 @@ body {
   margin: 10%;
   font-family: sans-serif; 
 }
-
-/* .fit-picture {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-} */
+header {
+  align-content: center;
+}
 
 main {
   display: grid;
@@ -31,12 +28,12 @@ main {
 
 h1 {
   font-family: 'ZCOOL XiaoWei', serif;
-  font-size: 5rem;
+  font-size: 3rem;
   text-align: center;
   text-decoration: underline;
-  color: white;
+  color: black;
+  font-weight: 700;
   -webkit-text-stroke: .3px black;
-  font-weight: 900;
 }
 
 h4 {
@@ -75,6 +72,11 @@ p {
 img {
       width: 160px;
       padding: 40px 10px 0px 0;
+}
+
+.logo {
+  width: 500px;
+  padding: 0px 0px 0px 20%;
 }
 
 .picDiv {

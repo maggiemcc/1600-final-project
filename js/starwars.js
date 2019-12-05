@@ -24,17 +24,27 @@ mainArea.appendChild(filmDiv)
 people.forEach(function(person) {
     let personDiv = document.createElement('div')
     let name = document.createElement('h1')
+    let height = document.createElement('h3')
     let gender = document.createElement('h3')
+    let mass = document.createElement('h3')
+    let birth_year = document.createElement('h3')
     let pic = document.createElement('img')
 
     personDiv.appendChild(name)
-    personDiv.appendChild(gender)
     personDiv.appendChild(pic)
+    personDiv.appendChild(gender)
+    personDiv.appendChild(birth_year)
+    personDiv.appendChild(height)  
+    personDiv.appendChild(mass)
+    
 
     let charNum = getCharNumber(person.url)
    
     name.textContent = person.name
-    gender.textContent = person.gender
+    gender.textContent = `GENDER: ${person.gender}`
+    birth_year.textContent = `BIRTH YR: ${person.birth_year}`
+    height.textContent = `HEIGHT (cm): ${person.height}`
+    mass.textContent = `MASS (kg): ${person.mass}`
     pic.src = `https://starwars-visualguide.com/assets/img/characters/${charNum}.jpg`
 
     

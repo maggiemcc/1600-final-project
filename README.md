@@ -17,7 +17,7 @@
 
 * [Let and const variables](https://github.com/maggiemcc/personal-portfolio-webpage/blob/master/js/planets.js)
 
-* [Conditional logic and value comparison](https://github.com/maggiemcc/personal-portfolio-webpage/blob/master/js/species.js)
+* [Conditional logic and value comparison](https://github.com/maggiemcc/personal-portfolio-webpage/blob/master/js/starwars.js)
 
 * [Conditional logic and value comparison](https://github.com/maggiemcc/personal-portfolio-webpage/blob/master/js/senator.js)
 

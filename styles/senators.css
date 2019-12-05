@@ -10,6 +10,8 @@
 
   .card {
     filter: drop-shadow(10px 10px 6px rgb(201, 201, 201));
+    margin-top: 15px;
+    margin-bottom: 15px;
   }
 
   body {

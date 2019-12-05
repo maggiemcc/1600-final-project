@@ -113,11 +113,12 @@ function getOldestSenator(arrayOfSenators) {
         let contentDiv = document.createElement('div')
         contentDiv.setAttribute('class', 'content')
         contentDiv.textContent = `PARTY: ${senator.party}, GENDER: ${senator.gender}, STATE: ${senator.state}, NEXT ELECTION: ${senator.next_election}, OFFICE: ${senator.office}`
-        let contentBreak = document.createElement('hr')
-        let timeSection = document.createElement('time')
-        let newDate = new Date()
-        timeSection.dateTime = `${newDate}`
-        timeSection.textContent = `${newDate}`
+        
+        // let contentBreak = document.createElement('hr')
+        // let timeSection = document.createElement('time')
+        // let newDate = new Date()
+        // timeSection.dateTime = `${newDate}`
+        // timeSection.textContent = `${newDate}`
 
 
         mediaContent.appendChild(titleP)
@@ -126,8 +127,8 @@ function getOldestSenator(arrayOfSenators) {
         mediaLeft.appendChild(figure)
         media.appendChild(mediaLeft)
         media.appendChild(mediaContent)
-        contentDiv.appendChild(contentBreak)
-        contentDiv.appendChild(timeSection)
+         
+        // contentDiv.appendChild(timeSection)
         cardContent.appendChild(media)
         cardContent.appendChild(contentDiv)
         return cardContent

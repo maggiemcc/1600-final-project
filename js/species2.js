@@ -7,26 +7,26 @@ species.forEach(species => {
     let speciesName = document.createElement('h3')
     let speciesClassification = document.createElement('p')
     let speciesLanguage = document.createElement('p')
-    let speciesAverage_height = document.createElement('p')
+    // let speciesAverage_height = document.createElement('p')
     let speciesAverage_Lifespan = document.createElement('p')
-    let speciesDesignation = document.createElement('p')
+    // let speciesDesignation = document.createElement('p')
     let speciesPic = document.createElement('img')
 
     speciesName.textContent = species.name
-    speciesDesignation.textContent = `Designation: ${species.designation}`
+    // speciesDesignation.textContent = `Designation: ${species.designation}`
     speciesClassification.textContent = `Classification: ${species.classification}`
     speciesLanguage.textContent = `Language: ${species.language}`
-    speciesAverage_height.textContent = `Height(cm): ${species.average_height}`
+    // speciesAverage_height.textContent = `Height(cm): ${species.average_height}`
     speciesAverage_Lifespan.textContent = `Lifespan(yrs): ${species.average_lifespan}`
     let speciesNum= getCharNumber(species.url)
     speciesPic.src = `https://starwars-visualguide.com/assets/img/species/${speciesNum}.jpg`
 
 
     speciesDiv.appendChild(speciesName)
-    speciesDiv.appendChild(speciesDesignation)
+    // speciesDiv.appendChild(speciesDesignation)
     speciesDiv.appendChild(speciesClassification)
     speciesDiv.appendChild(speciesLanguage)
-    speciesDiv.appendChild(speciesAverage_height)
+    // speciesDiv.appendChild(speciesAverage_height)
     speciesDiv.appendChild(speciesAverage_Lifespan)
 
     speciesDiv.appendChild(speciesPic)

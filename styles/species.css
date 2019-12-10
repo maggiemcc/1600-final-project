@@ -1,10 +1,11 @@
 *, *:before, *:after {
     box-sizing: border-box;
   }
-  
+
   body {
     margin: 40px;
     font-family: 'Anton', sans-serif;
+    background: linear-gradient(#fffefe, #9b0202);
   }
   
   h1, p {
@@ -78,15 +79,13 @@
     }
   }
   
-  body {
-      background: linear-gradient(#fffefe, #9b0202);
-  }
   
   img {
     width: 250px;
     border: 2px solid white;
     border-radius: 5px;
   }
+
   
   color {
     color: blue;

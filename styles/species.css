@@ -8,8 +8,9 @@
   }
   
   h1, p {
-    margin: 0 0 1.5em 0;
+    margin: 0 0 1em 0;
   }
+
   
   /* no grid support? */
   .sidebar {
@@ -44,7 +45,7 @@
     font-size: 1rem;
     /* needed for the floated layout*/
     margin-bottom: 10px;
-    border: blue solid 2px;
+    border: white solid 2px;
   }
   
   .header {
@@ -78,7 +79,7 @@
   }
   
   body {
-      background: linear-gradient(#fffefe, #c9c9c9, #ff0000);
+      background: linear-gradient(#fffefe, #9b0202);
   }
   
   img {
@@ -99,4 +100,3 @@
     font-size: 2rem;
     text-decoration: underline;
   }
-  

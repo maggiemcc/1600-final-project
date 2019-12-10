@@ -22,6 +22,9 @@
   .content {
     float: right;
     width: 79.7872%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-gap: 1.8rem;
   }
   
   /* make a grid */
@@ -29,7 +32,7 @@
     max-width: 1850px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 1fr 2.5fr;
+    grid-template-columns: 1fr 4fr;
     grid-gap: 15px;
   }
   
@@ -41,6 +44,7 @@
     font-size: 1rem;
     /* needed for the floated layout*/
     margin-bottom: 10px;
+    border: blue solid 2px;
   }
   
   .header {
@@ -93,6 +97,6 @@
     color: red;
     -webkit-text-stroke: 1px rgb(255, 255, 255); 
     font-size: 2rem;
-    text-decoration: underline solid white;
+    text-decoration: underline;
   }
   

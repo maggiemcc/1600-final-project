@@ -124,19 +124,19 @@ function populateDOM(single_pokemon) {
   }
 
 
-class Pokemon {
-  constructor(id, order, base_experience, name, height, weight) {
-    this.id = id
-    this.order = order
-    this.base_experience = base_experience
-    this.name = name
-    this.height = height
-    this.weight = weight
-  }
-}
+// class Pokemon {
+//   constructor(id, order, base_experience, name, height, weight) {
+//     this.id = id
+//     this.order = order
+//     this.base_experience = base_experience
+//     this.name = name
+//     this.height = height
+//     this.weight = weight
+//   }
+// }
 
-const Davemon = new Pokemon(810, 810, 200, 'Davemon', 3.5, 1.65);
-populateDOM(Davemon)
+// const Davemon = new Pokemon(810, 810, 200, 'Davemon', 3.5, 1.65);
+// populateDOM(Davemon)
 
 
 var card = document.querySelector('.card');

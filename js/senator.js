@@ -107,14 +107,23 @@ function getOldestSenator(arrayOfSenators) {
         titleP.textContent = `${senator.first_name} ${senator.last_name}`
         let subtitleP = document.createElement('p')
         subtitleP.setAttribute('class', 'subtitle is-6')
+
         subtitleP.textContent = `${senator.date_of_birth} Age: ${_calculateAge(new Date(senator.date_of_birth))} `
         
-
+    
         let contentDiv = document.createElement('div')
+        let gender = document.createElement('div')
+        let state = document.createElement('div')
+        let next_election = document.createElement('div')
+        let office = document.createElement('div')
+        let party = document.createElement('div')
         contentDiv.setAttribute('class', 'content')
-        contentDiv.textContent = `PARTY: ${senator.party}, GENDER: ${senator.gender}, STATE: ${senator.state}, NEXT ELECTION: ${senator.next_election}, OFFICE: ${senator.office}`
-        
-        // let contentBreak = document.createElement('hr')
+        party.textContent = `PARTY: ${senator.party}`
+        gender.textContent = `GENDER: ${senator.gender}`
+        state.textContent = `STATE: ${senator.state}`
+        next_election.textContent = `NEXT ELECTION: ${senator.next_election}`
+        office.textContent = `OFFICE: ${senator.office}`
+        let contentBreak = document.createElement('hr')
         // let timeSection = document.createElement('time')
         // let newDate = new Date()
         // timeSection.dateTime = `${newDate}`
@@ -131,6 +140,12 @@ function getOldestSenator(arrayOfSenators) {
         // contentDiv.appendChild(timeSection)
         cardContent.appendChild(media)
         cardContent.appendChild(contentDiv)
+        cardContent.appendChild(party)
+        cardContent.appendChild(gender)
+        cardContent.appendChild(state)
+        cardContent.appendChild(next_election)
+        cardContent.appendChild(contentBreak)
+        cardContent.appendChild(office)
         return cardContent
     }
 

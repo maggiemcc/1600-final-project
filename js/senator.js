@@ -115,14 +115,22 @@ function getOldestSenator(arrayOfSenators) {
         let gender = document.createElement('div')
         let state = document.createElement('div')
         let next_election = document.createElement('div')
+        let state_rank = document.createElement('div')
         let office = document.createElement('div')
         let party = document.createElement('div')
+        let phone = document.createElement('div')
+        let twitter_account = document.createElement('div')
+
+
         contentDiv.setAttribute('class', 'content')
         party.textContent = `PARTY: ${senator.party}`
         gender.textContent = `GENDER: ${senator.gender}`
         state.textContent = `STATE: ${senator.state}`
         next_election.textContent = `NEXT ELECTION: ${senator.next_election}`
+        state_rank.textContent = `STATE RANK: ${senator.state_rank}`
         office.textContent = `OFFICE: ${senator.office}`
+        phone.textContent = `PHONE: ${senator.phone}`
+        twitter_account.textContent = `TWITTER: ${senator.twitter_account}`
         let contentBreak = document.createElement('hr')
         // let timeSection = document.createElement('time')
         // let newDate = new Date()
@@ -143,9 +151,13 @@ function getOldestSenator(arrayOfSenators) {
         cardContent.appendChild(party)
         cardContent.appendChild(gender)
         cardContent.appendChild(state)
+        cardContent.appendChild(state_rank)
         cardContent.appendChild(next_election)
+        
         cardContent.appendChild(contentBreak)
         cardContent.appendChild(office)
+        cardContent.appendChild(phone)
+        cardContent.appendChild(twitter_account)
         return cardContent
     }
 

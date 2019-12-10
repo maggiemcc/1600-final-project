@@ -70,7 +70,7 @@ function getOldestSenator(arrayOfSenators) {
     //    cardFigure.setAttribute('class', 'image is-4by3')
         let figureImage = document.createElement('img')
         figureImage.src = `https://www.congress.gov/img/member/${senator.id.toLowerCase()}_200.jpg`
-        figureImage.alt = 'Placeholder image'
+        // figureImage.alt = 'Placeholder image'
 
         cardFigure.appendChild(figureImage)
         cardImage.appendChild(cardFigure)
@@ -98,7 +98,7 @@ function getOldestSenator(arrayOfSenators) {
         figureImage.src = "/Images/Republican.png"}
         if(senator.party === "ID") {
         figureImage.src = "/Images/independent.png"}
-        figureImage.alt="Placeholder thumbnail"
+        figureImage.alt= "Placeholder thumbnail"
         
         let mediaContent = document.createElement('div')
         mediaContent.setAttribute('class', 'media-content')
@@ -120,6 +120,8 @@ function getOldestSenator(arrayOfSenators) {
         let party = document.createElement('div')
         let phone = document.createElement('div')
         let twitter_account = document.createElement('div')
+        let fax = document.createElement('div')
+        let title = document.createElement('div')
 
 
         contentDiv.setAttribute('class', 'content')
@@ -128,9 +130,11 @@ function getOldestSenator(arrayOfSenators) {
         state.textContent = `STATE: ${senator.state}`
         next_election.textContent = `NEXT ELECTION: ${senator.next_election}`
         state_rank.textContent = `STATE RANK: ${senator.state_rank}`
+        title.textContent = `TITLE: ${senator.title}`
         office.textContent = `OFFICE: ${senator.office}`
         phone.textContent = `PHONE: ${senator.phone}`
         twitter_account.textContent = `TWITTER: ${senator.twitter_account}`
+        fax.textContent = `FAX: ${senator.fax}`
         let contentBreak = document.createElement('hr')
         // let timeSection = document.createElement('time')
         // let newDate = new Date()
@@ -148,6 +152,7 @@ function getOldestSenator(arrayOfSenators) {
         // contentDiv.appendChild(timeSection)
         cardContent.appendChild(media)
         cardContent.appendChild(contentDiv)
+        cardContent.appendChild(title)
         cardContent.appendChild(party)
         cardContent.appendChild(gender)
         cardContent.appendChild(state)
@@ -157,6 +162,8 @@ function getOldestSenator(arrayOfSenators) {
         cardContent.appendChild(contentBreak)
         cardContent.appendChild(office)
         cardContent.appendChild(phone)
+        cardContent.appendChild(fax)
+        
         cardContent.appendChild(twitter_account)
         return cardContent
     }

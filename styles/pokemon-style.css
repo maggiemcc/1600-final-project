@@ -89,6 +89,7 @@ img {
   border: 1px solid #CCC;
   margin: 0;
   perspective: 600px;
+  border-radius: .4rem;
 }
 
 .card {

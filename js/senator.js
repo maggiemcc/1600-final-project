@@ -119,7 +119,7 @@ function getOldestSenator(arrayOfSenators) {
         let office = document.createElement('div')
         let party = document.createElement('div')
         let phone = document.createElement('div')
-        let twitter_account = document.createElement('div')
+        // let twitter_account = document.createElement('div')
         let fax = document.createElement('div')
         let title = document.createElement('div')
 
@@ -131,10 +131,10 @@ function getOldestSenator(arrayOfSenators) {
         next_election.textContent = `NEXT ELECTION: ${senator.next_election}`
         state_rank.textContent = `STATE RANK: ${senator.state_rank}`
         title.textContent = `TITLE: ${senator.title}`
-        office.textContent = `OFFICE: ${senator.office}`
-        phone.textContent = `PHONE: ${senator.phone}`
-        twitter_account.textContent = `TWITTER: ${senator.twitter_account}`
-        fax.textContent = `FAX: ${senator.fax}`
+        office.textContent = `• OFFICE: ${senator.office}`
+        phone.textContent = `• PHONE: ${senator.phone}`
+        // twitter_account.textContent = `• TWITTER: ${senator.twitter_account}`
+        fax.textContent = `• FAX: ${senator.fax}`
         let contentBreak = document.createElement('hr')
         // let timeSection = document.createElement('time')
         // let newDate = new Date()
@@ -165,7 +165,7 @@ function getOldestSenator(arrayOfSenators) {
         cardContent.appendChild(fax)
         
         
-        cardContent.appendChild(twitter_account)
+        // cardContent.appendChild(twitter_account)
         return cardContent
     }
 

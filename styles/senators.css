@@ -12,7 +12,7 @@
     filter: drop-shadow(10px 10px 6px rgb(201, 201, 201));
     margin-top: 15px;
     margin-bottom: 15px;
-    border-radius: 2rem;
+    border-radius: 1.5rem;
   }
 
   body {
@@ -22,8 +22,8 @@
 
   figure img {
       height: 250px;
-      border-top-left-radius: 2rem;
-      border-bottom-right-radius: 2rem;
+      border-top-left-radius: 1.5rem;
+      border-bottom-right-radius: 1.5rem;
       filter: drop-shadow(2px 2px 4px gray);
   } 
 

@@ -24,6 +24,9 @@ h1, p {
 .content {
   float: right;
   width: 79.7872%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-gap: 1.8rem;
 }
 
 /* make a grid */
@@ -32,7 +35,7 @@ h1, p {
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 3fr;
-  grid-gap: 10px;
+  grid-gap: 20px;
 }
 
 .wrapper > * {
@@ -43,6 +46,7 @@ h1, p {
   font-size: 1rem;
   /* needed for the floated layout*/
   margin-bottom: 10px;
+  border: white solid 2px;
 }
 
 .header {
@@ -80,7 +84,8 @@ body {
 }
 
 img {
-  width: 400px;
+  width: 250px;
+  margin-top: 5%;
 
 }
 color {

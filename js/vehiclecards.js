@@ -99,17 +99,17 @@ async function getAPIData(url) {
   
     function fillCardFront(vehiclesFront, data) {
       let vehiclescost_in_credits = document.createElement('p')
-      vehiclescost_in_credits.textContent = data.cost_in_credits
+      vehiclescost_in_credits.textContent = `COST: ${data.cost_in_credits}`
       vehiclesFront.appendChild(vehiclescost_in_credits)
     }
   
     function fillCardBack(vehiclesBack, data) {
       let vehiclesvehicle_class = document.createElement('h5')
-      vehiclesvehicle_class.textContent = data.vehicle_class
+      vehiclesvehicle_class.textContent = `CLASS: ${data.vehicle_class}`
       vehiclesBack.appendChild(vehiclesvehicle_class)
   
       let vehiclesmax_atmosphering_speed = document.createElement('h3')
-      vehiclesmax_atmosphering_speed.textContent = data.max_atmosphering_speed
+      vehiclesmax_atmosphering_speed.textContent = `SPEED: ${data.max_atmosphering_speed}`
       vehiclesBack.appendChild(vehiclesmax_atmosphering_speed)
     }
       

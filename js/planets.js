@@ -38,9 +38,14 @@ function populateDOM(single_planets) {
     let planetsBack = document.createElement('div')
     let name = document.createElement('h4')
     let pic = document.createElement('img')
+    let population = document.createElement('h3')
+    let diameter = document.createElement('h3')
+    let terrain = document.createElement('h3')
+    let surface_water = document.createElement('h3')
+    let orbital_period = document.createElement('p')
 
-    fillCardFront(planetsFront, single_planets)
-    fillCardBack(planetsBack, single_planets)
+    // fillCardFront(planetsFront, single_planets)
+    // fillCardBack(planetsBack, single_planets)
 
    pic.setAttribute('class', 'picDivs')
    planetsScene.setAttribute('class', 'scene')
@@ -49,14 +54,23 @@ function populateDOM(single_planets) {
    planetsBack.setAttribute('class', 'card__face card__face--back')
   
 
-    
 
     let planetsName = getplanetsName(single_planets.name)
     planetsBack.appendChild(name)
     name.textContent = `${single_planets.name}`
+    orbital_period.textContent = `ORBITS: ${single_planets.orbital_period} days`
+    population.textContent = `• POPULATION: ${single_planets.population}`
+    diameter.textContent = `• DIAMETER: ${single_planets.diameter}km`
+    terrain.textContent = `• TERRAIN: ${single_planets.terrain}`
+    surface_water.textContent = `• SURFACE WATER : ${single_planets.surface_water}%`
+
     pic.src = `../planets/${planetsName}.jpg`
     planetsFront.appendChild(pic)
-  
+  planetsBack.appendChild(population)
+  planetsBack.appendChild(diameter)
+  planetsBack.appendChild(terrain)
+  planetsBack.appendChild(surface_water)
+  planetsFront.appendChild(orbital_period)
 
     planetsCard.appendChild(planetsFront)
     planetsCard.appendChild(planetsBack)
@@ -70,21 +84,21 @@ function populateDOM(single_planets) {
   }
 
 
-  function fillCardFront(planetsFront, data) {
-    let planetsrotation_period = document.createElement('p')
-    planetsrotation_period.textContent = data.rotation_period
-    planetsFront.appendChild(planetsrotation_period)
-  }
+  // function fillCardFront(planetsFront, data) {
+  //   let planetsrotation_period = document.createElement('p')
+  //   planetsrotation_period.textContent = `ROTATION ${data.rotation_period}`
+  //   planetsFront.appendChild(planetsrotation_period)
+  // }
 
-  function fillCardBack(planetsBack, data) {
-    let planetsDiameter = document.createElement('h5')
-    planetsDiameter.textContent = data.diameter
-    planetsBack.appendChild(planetsDiameter)
+  // function fillCardBack(planetsBack, data) {
+  //   let planetsDiameter = document.createElement('p')
+  //   planetsDiameter.textContent = `DIAMETER ${data.diameter}`
+  //   planetsBack.appendChild(planetsDiameter)
 
-    let planetsPopulation = document.createElement('h3')
-    planetsPopulation.textContent = data.population
-    planetsBack.appendChild(planetsPopulation)
-  }
+  //   let planetsPopulation = document.createElement('h3')
+  //   planetsPopulation.textContent = `POPULATION ${data.population}`
+  //   planetsBack.appendChild(planetsPopulation)
+  // }
     
 
 
@@ -99,17 +113,19 @@ function populateDOM(single_planets) {
 
 // data.stats[0].base_stat
 class planets {
-  constructor(id, name, rotation_period, diameter, population) {
+  constructor(id, name, orbital_period, diameter, population, terrain, surface_water) {
     this.id = id
     this.name = name
-    this.rotation_period = rotation_period
+    this.orbital_period = orbital_period
     this.diameter = diameter
     this.population = population
+    this.terrain = terrain
+    this.surface_water = surface_water
   }
 }
 
-const Maggies = new planets(900, 'Maggies Planet (Earth)', 24, 12742, '7.7 billion');
+const Maggies = new planets(900, 'Maggies Planet', 365, 12742, '7.7 billion', 'mountains, jungle, desert, ocean', 71);
 populateDOM(Maggies)
 
-const Krypton = new planets(900, 'Krypton', 27, 1095, 'was 1.4 billion');
+const Krypton = new planets(900, 'Krypton', 'N/A', 1095, 'was 1.4 billion', 'mountains, jungle', 'N/A');
 populateDOM(Krypton)

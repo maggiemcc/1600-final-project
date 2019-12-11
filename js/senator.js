@@ -164,6 +164,7 @@ function getOldestSenator(arrayOfSenators) {
         cardContent.appendChild(phone)
         cardContent.appendChild(fax)
         
+        
         cardContent.appendChild(twitter_account)
         return cardContent
     }

@@ -76,3 +76,4 @@ function resetBoard() {
 cards.forEach(card => card.addEventListener('click', flipCard));
 
 
+// Created with help of Youtube tutorial

@@ -13,7 +13,7 @@
 
 * [Dot notation](https://github.com/maggiemcc/personal-portfolio-webpage/blob/master/js/planets.js)
 
-* [Arrow functions](https://github.com/maggiemcc/personal-portfolio-webpage/blob/master/js/species.js)
+* [Arrow functions](https://github.com/maggiemcc/personal-portfolio-webpage/blob/master/js/senator.js)
 
 * [Let and const variables](https://github.com/maggiemcc/personal-portfolio-webpage/blob/master/js/planets.js)
 

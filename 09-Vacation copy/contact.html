@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="vacation.css">
+    
+<link href="https://fonts.googleapis.com/css?family=Solway&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+
+<meta charset="UTF-8">
+<title>CONTACT: Maggie's Travel Agency</title>
+    <!-- TELLS PHONES NOT TO LIE ABOUT THEIR WIDTH-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, max-scale=1">
+</head>
+    
+<body>
+     <div id="wrapper">
+<!-- Start of header -->
+<header>
+      <h1>Maggie's Travel Agency</h1>
+        <h2>Great Deals and Great Destinations</h2>
+</header>
+    
+<!-- Start of nav-->
+<nav>
+    <ul class="menu">
+    <li><a href="vacation-index.html">Home</a></li>
+     <li><a href="packages.html">Packages</a></li>
+    <li><a href="video.html">Video</a></li>
+    <li><a href="gallery.html">Gallery</a></li>
+    <li class="active"><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="keepOpen"></div>
+</nav>
+    
+<!-- Start of main -->    
+<main>
+   <h1>Contact</h1>
+
+    <form action="thanks.html" method="post" enctype="multipart/form-data" name="attend" class="contact">
+        
+        
+    <fieldset>
+        <legend>Personal Info</legend>
+          <label><span>Name:</span><input name="name" type="text" placeholder="full name" required class="userinfo"></label>
+            
+        <label><span>Address:</span><input name="address" type="text" placeholder="address" required class="userinfo"></label>  
+              
+        <label><span>Email:</span><input name="email" type="email" placeholder="email@gmail.com" class="userinfo"></label>      
+        
+        <label><span>Phone:</span><input name="phone" type="tel" placeholder="123-555-6789" required pattern="[0-9-. ]{10,14}" class="userinfo"></label> 
+    </fieldset>
+                
+        
+    <fieldset>
+         <legend>How to Contact You</legend>
+        <span>Preferred contact method:</span>
+        <label><input type="radio" name="OS" value="Phone">Phone</label><br>
+
+         <label><input type="radio" name="OS" value="Email">Email</label><br>
+        
+        <label><input type="radio" name="OS" value="Either">Either</label> 
+        
+        
+         <span>Pick best time of day: </span>
+        <label><input type="checkbox" name="time" value="Morning"/> Morning</label><br>
+       
+        <label><input type="checkbox" name="time" value="Afternoon"/> Afternoon</label><br>
+        
+        <label><input type="checkbox" name="time" value="Evening"/>Evening</label><br>
+    </fieldset>
+        
+        
+    <fieldset>
+         <legend>Reason for Contact</legend>
+        <label><span>How can we help you?</span><select name="topic" class="userinfo">
+        <option value="Planning">Trip Planning</option> 
+            
+        <option value="Tech Issues">Technical Issues</option>
+            
+        <option value="Inquiries">Media Inquiries</option>
+            
+        <option value="Other">Other</option>    
+        </select></label>
+    </fieldset>
+       
+        
+    <fieldset>
+        <legend>Message</legend>
+    <label><span>Please write your questions or comments below.<br> We will respond as soon as possible:</span><textarea class="userinfo" name="message" required></textarea></label> 
+    </fieldset>
+  
+         
+        
+    <input type="submit" name="submit" value="Submit My Contact Form" class="userbutton"> 
+    <input type="hidden" name="subject" value="Contact Form">
+    <input type="hidden" name="redirect" value="Contact Form">
+        
+    </form>
+
+    
+</main>
+  
+<!-- Start of footer -->    
+<footer>
+    <p>&copy; 2019 &bull; Built by Maggie McCausland</p>
+</footer>
+        </div> <!-- end wrapper -->
+</body>
+</html>

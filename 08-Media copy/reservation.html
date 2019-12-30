@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="stable.css">
+<link href="https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700&display=swap" rel="stylesheet">
+
+<meta charset="UTF-8">
+<title>RESERVE: Maggie's Stables</title>
+    <!-- TELLS PHONES NOT TO LIE ABOUT THEIR WIDTH-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, max-scale=1">
+</head>
+    
+<body>
+     <div id="wrapper">
+<!-- Start of header -->
+<header>
+      <h1>Maggie's Stables</h1>
+        <h2>We Offer Rides and Lessons</h2>
+</header>
+    
+<!-- Start of nav-->
+<nav>
+    <ul class="menu">
+    <li><a href="stable-index.html">About</a></li>
+     <li><a href="rides.html">Rides</a></li>
+     <li class="active"><a href="reservation.html">Reserve Your Ride</a></li>
+    <li><a href="schedule.html">Schedule</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="location.html">Location</a></li>
+    </ul>
+    <div class="keepOpen"></div>
+</nav>
+    
+<!-- Start of main -->    
+<main>
+   <h1>Reserve Your Ride</h1>
+
+    <form action="thanks.html" method="post" enctype="multipart/form-data" name="attend" class="riding">
+         
+        
+    <fieldset>
+        <legend>Personal Info</legend>
+          <label><span>Name:</span><input name="name" type="text" placeholder="full name" required class="userinfo"></label>
+            
+        <label><span>Address:</span><input name="address" type="text" placeholder="address" required class="userinfo"></label>  
+              
+        <label><span>Email:</span><input name="email" type="email" placeholder="email@gmail.com" class="userinfo"></label>      
+        
+        <label><span>Phone:</span><input name="phone" type="tel" placeholder="123-555-6789" required pattern="[0-9-. ]{10,14}" class="userinfo"></label>  
+    </fieldset>
+        
+        
+        
+    <fieldset>
+        <legend>How Many People?</legend>
+          <label><span>Number of people signing up for:<br> *All children 16 and under must be accompanied by an adult.</span><input type="text" name="people" placeholder="0"  required pattern="[0-9]{1,2}" class="userinfo"> (up to 10) </label>
+
+    </fieldset>
+             
+        
+        
+    <fieldset>
+        <legend>Registration Info</legend>
+        <span>Which ride would you like?</span>
+        
+        <label><input type="radio" name="OS" value="morning">Morning Ride</label><br>
+        
+         <label><input type="radio" name="OS" value="afternoon">Afternoon Ride</label><br>
+
+         <label><input type="radio" name="OS" value="twohour">Two Hour Ride</label>
+        
+        <label><span>Preferred Date: </span><input type="date" name="date" required class="userinfo"></label>
+        
+        
+        <label><span>If you have any questions, comments, or concerns about any of our rides please write them below.<br> We will respond as soon as possible:</span><textarea class="userinfo" name="children"></textarea></label>
+
+    </fieldset>
+        
+        
+    <fieldset>
+        <legend>Merchandise</legend>
+        <span>We sell our own Maggie's Stables T-Shirts and hoodies. You can purchase them online here or when you visit our stables.</span>
+        
+        <span>Pick your product:</span>
+        <label><input type="radio" name="OS" value="T-Shirt">T-Shirt</label><br>
+
+         <label><input type="radio" name="OS" value="Hoodie">Hoodie</label>  
+        
+    
+        <span>Pick your size(s): </span>
+        <label><input type="checkbox" name="size" value="XS"/> XS</label><br>
+       
+        <label><input type="checkbox" name="size" value="small"/> Small</label><br>
+        
+        <label><input type="checkbox" name="size" value="medium"/>Medium</label><br>
+        
+        <label><input type="checkbox" name="size" value="large"/> Large</label><br>
+        
+        <label><input type="checkbox" name="size" value="XL"/> XL</label>
+            
+            
+        <label><span>Pick how many you would like: </span><input type="text" name="number" placeholder="0" pattern="[0-9]{1,2}" class="userinfo"> </label>
+    </fieldset>
+             
+        
+     <fieldset>
+         <legend>Payment</legend>
+        <label><span>Credit Card Type: </span><select name="creditcard" class="userinfo">
+        <option value="MC">Mastercard</option>
+        <option value="V">VISA</option>
+        <option value="D">Discover</option>    
+        </select></label>
+    </fieldset>
+         
+        
+    <input type="submit" name="submit" value="Reserve My Ride!" class="userbutton"> 
+    <input type="hidden" name="subject" value="Ride Registration">
+    <input type="hidden" name="redirect" value="Ride Registration">
+        
+        
+    </form>
+    
+    
+    
+    
+</main>
+  
+<!-- Start of footer -->    
+<footer>
+    <p>&copy; 2019 &bull; Built by Maggie McCausland</p>
+</footer>
+        </div> <!-- end wrapper -->
+</body>
+</html>

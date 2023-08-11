@@ -1,6 +1,6 @@
 # Final Project for DGM 1600
 
-[Personal Portfolio Page - Netlify](https://github.com/maggiemcc/1600-final-project)
+[Personal Portfolio Page - Netlify](https://1600-final-project.netlify.app/)
 
 
 **Here are some skills I've learned and used:**
